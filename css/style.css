@@ -1,0 +1,3990 @@
+.jqstooltip {
+    box-sizing: content-box; }
+  
+  .rc-highlight-up {
+    color: #6ca82e; }
+  
+  .rc-highlight-down {
+    color: #ce5c5c; }
+  
+  .rc-highlight-up-bg {
+    background-color: #6ca82e; }
+  
+  .rc-highlight-down-bg {
+    background-color: #ce5c5c; }
+  
+  [data-coin-image] {
+    background-image: url(../admin/images/logo-20x20.png); }
+  
+  @-moz-keyframes spin {
+    from {
+      -moz-transform: rotate(0deg); }
+    to {
+      -moz-transform: rotate(360deg); } }
+  
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg); }
+    to {
+      -webkit-transform: rotate(360deg); } }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(360deg); } }
+  
+  .rc-ajax-loading {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  
+  .bb-spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative; }
+  
+  .cube1, .cube2 {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+    animation: sk-cubemove 1.8s infinite ease-in-out; }
+  
+  .cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s; }
+  
+  @-webkit-keyframes sk-cubemove {
+    25% {
+      -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5); }
+    50% {
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg); }
+    75% {
+      -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+    100% {
+      -webkit-transform: rotate(-360deg); } }
+  
+  @keyframes sk-cubemove {
+    25% {
+      transform: translateX(42px) rotate(-90deg) scale(0.5);
+      -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5); }
+    50% {
+      transform: translateX(42px) translateY(42px) rotate(-179deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg); }
+    50.1% {
+      transform: translateX(42px) translateY(42px) rotate(-180deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg); }
+    75% {
+      transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); }
+    100% {
+      transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg); } }
+  
+  .select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle; }
+  
+  .select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 34px;
+    user-select: none;
+    -webkit-user-select: none; }
+  
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 12px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  
+  .select2-container .select2-selection--single .select2-selection__clear {
+    position: relative; }
+  
+  .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 8px;
+    padding-left: 20px; }
+  
+  .select2-container .select2-selection--multiple {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    min-height: 34px;
+    user-select: none;
+    -webkit-user-select: none; }
+  
+  .select2-container .select2-selection--multiple .select2-selection__rendered {
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  
+  .select2-container .select2-search--inline {
+    float: left; }
+  
+  .select2-container .select2-search--inline .select2-search__field {
+    box-sizing: border-box;
+    border: none;
+    font-size: 100%;
+    margin-top: 5px;
+    padding: 0; }
+  
+  .select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
+    -webkit-appearance: none; }
+  
+  .select2-dropdown {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -100000px;
+    width: 100%;
+    z-index: 1051; }
+  
+  .select2-results {
+    display: block; }
+  
+  .select2-results__options {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  
+  .select2-results__option {
+    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none; }
+  
+  .select2-results__option[aria-selected] {
+    cursor: pointer; }
+  
+  .select2-container--open .select2-dropdown {
+    left: 0; }
+  
+  .select2-container--open .select2-dropdown--above {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .select2-container--open .select2-dropdown--below {
+    margin-top: 2px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
+  
+  .select2-search--dropdown {
+    display: block;
+    padding: 4px 8px; }
+  
+  .select2-search--dropdown .select2-search__field {
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box; }
+  
+  .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
+    -webkit-appearance: none; }
+  
+  .select2-search--dropdown.select2-search--hide {
+    display: none; }
+  
+  .select2-close-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    filter: alpha(opacity=0); }
+  
+  .select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+  
+  .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ccc; }
+  
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 2.3;
+    font-size: 14px; }
+  
+  .select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold; }
+  
+  .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #999; }
+  
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 30px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 30px; }
+  
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
+    float: left; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+    left: 1px;
+    right: auto; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection--single {
+    background-color: #eee;
+    cursor: default; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
+    display: none; }
+  
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #888 transparent;
+    border-width: 0 4px 5px 4px; }
+  
+  .select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    width: 100%; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    list-style: none; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+    color: #999;
+    margin-top: 5px;
+    float: left; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 10px; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #e4e4e4;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px; }
+  
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #333; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+    float: right; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
+    margin-left: 5px;
+    margin-right: auto; }
+  
+  .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove {
+    margin-left: 2px;
+    margin-right: auto; }
+  
+  .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid black 1px;
+    outline: 0; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection--multiple {
+    background-color: #eee;
+    cursor: default; }
+  
+  .select2-container--default.select2-container--disabled .select2-selection__choice__remove {
+    display: none; }
+  
+  .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  
+  .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #aaa;
+    border-radius: 100px;
+    margin: 5px 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+  
+  .select2-container--default .select2-search--inline .select2-search__field {
+    background: transparent;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: textfield; }
+  
+  .select2-container--default .select2-results > .select2-results__options {
+    max-height: 200px;
+    overflow-y: auto; }
+  
+  .select2-container--default .select2-results__option[role=group] {
+    padding: 0; }
+  
+  .select2-container--default .select2-results__option[aria-disabled=true] {
+    color: #999; }
+  
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #ddd; }
+  
+  .select2-container--default .select2-results__option .select2-results__option {
+    padding-left: 1em; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__group {
+    padding-left: 0; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -1em;
+    padding-left: 2em; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -2em;
+    padding-left: 3em; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -3em;
+    padding-left: 4em; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -4em;
+    padding-left: 5em; }
+  
+  .select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option {
+    margin-left: -5em;
+    padding-left: 6em; }
+  
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #5897fb;
+    color: white; }
+  
+  .select2-container--default .select2-results__group {
+    cursor: default;
+    display: block;
+    padding: 6px; }
+  
+  .realcrypto-table-wrap table.dataTable {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0; }
+  
+  .realcrypto-table-wrap table.dataTable thead th, .realcrypto-table-wrap table.dataTable tfoot th {
+    font-weight: bold; }
+  
+  .realcrypto-table-wrap table.dataTable thead th, .realcrypto-table-wrap table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #111; }
+  
+  .realcrypto-table-wrap table.dataTable thead th:active, .realcrypto-table-wrap table.dataTable thead td:active {
+    outline: none; }
+  
+  .realcrypto-table-wrap table.dataTable tfoot th, .realcrypto-table-wrap table.dataTable tfoot td {
+    padding: 10px 18px 6px 18px;
+    border-top: 1px solid #111; }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting, .realcrypto-table-wrap table.dataTable thead .sorting_asc, .realcrypto-table-wrap table.dataTable thead .sorting_desc, .realcrypto-table-wrap table.dataTable thead .sorting_asc_disabled, .realcrypto-table-wrap table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+    background-repeat: no-repeat;
+    background-position: center right; }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting {
+    background-image: url("../images/sort_both.png"); }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting_asc {
+    background-image: url("../images/sort_asc.png"); }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting_desc {
+    background-image: url("../images/sort_desc.png"); }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting_asc_disabled {
+    background-image: url("../images/sort_asc_disabled.png"); }
+  
+  .realcrypto-table-wrap table.dataTable thead .sorting_desc_disabled {
+    background-image: url("../images/sort_desc_disabled.png"); }
+  
+  .realcrypto-table-wrap table.dataTable tbody tr {
+    background-color: #ffffff; }
+  
+  .realcrypto-table-wrap table.dataTable tbody tr.selected {
+    background-color: #B0BED9; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th, .realcrypto-table-wrap table.dataTable tbody td {
+    padding: 8px 10px; }
+  
+  .realcrypto-table-wrap table.dataTable.row-border tbody th, .realcrypto-table-wrap table.dataTable.row-border tbody td, .realcrypto-table-wrap table.dataTable.display tbody th, .realcrypto-table-wrap table.dataTable.display tbody td {
+    border-top: 1px solid #ddd; }
+  
+  .realcrypto-table-wrap table.dataTable.row-border tbody tr:first-child th, .realcrypto-table-wrap table.dataTable.row-border tbody tr:first-child td, .realcrypto-table-wrap table.dataTable.display tbody tr:first-child th, .realcrypto-table-wrap table.dataTable.display tbody tr:first-child td {
+    border-top: none; }
+  
+  .realcrypto-table-wrap table.dataTable.cell-border tbody th, .realcrypto-table-wrap table.dataTable.cell-border tbody td {
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd; }
+  
+  .realcrypto-table-wrap table.dataTable.cell-border tbody tr th:first-child, .realcrypto-table-wrap table.dataTable.cell-border tbody tr td:first-child {
+    border-left: 1px solid #ddd; }
+  
+  .realcrypto-table-wrap table.dataTable.cell-border tbody tr:first-child th, .realcrypto-table-wrap table.dataTable.cell-border tbody tr:first-child td {
+    border-top: none; }
+  
+  .realcrypto-table-wrap table.dataTable.stripe tbody tr.odd, .realcrypto-table-wrap table.dataTable.display tbody tr.odd {
+    background-color: #f9f9f9; }
+  
+  .realcrypto-table-wrap table.dataTable.stripe tbody tr.odd.selected, .realcrypto-table-wrap table.dataTable.display tbody tr.odd.selected {
+    background-color: #acbad4; }
+  
+  .realcrypto-table-wrap table.dataTable.hover tbody tr:hover, .realcrypto-table-wrap table.dataTable.display tbody tr:hover {
+    background-color: #f6f6f6; }
+  
+  .realcrypto-table-wrap table.dataTable.hover tbody tr:hover.selected, .realcrypto-table-wrap table.dataTable.display tbody tr:hover.selected {
+    background-color: #aab7d1; }
+  
+  .realcrypto-table-wrap table.dataTable.order-column tbody tr > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column tbody tr > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column tbody tr > .sorting_3, .realcrypto-table-wrap table.dataTable.display tbody tr > .sorting_1, .realcrypto-table-wrap table.dataTable.display tbody tr > .sorting_2, .realcrypto-table-wrap table.dataTable.display tbody tr > .sorting_3 {
+    background-color: #fafafa; }
+  
+  .realcrypto-table-wrap table.dataTable.order-column tbody tr.selected > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column tbody tr.selected > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column tbody tr.selected > .sorting_3, .realcrypto-table-wrap table.dataTable.display tbody tr.selected > .sorting_1, .realcrypto-table-wrap table.dataTable.display tbody tr.selected > .sorting_2, .realcrypto-table-wrap table.dataTable.display tbody tr.selected > .sorting_3 {
+    background-color: #acbad5; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+    background-color: #f1f1f1; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd > .sorting_2 {
+    background-color: #f3f3f3; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd > .sorting_3 {
+    background-color: whitesmoke; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd.selected > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_1 {
+    background-color: #a6b4cd; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd.selected > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_2 {
+    background-color: #a8b5cf; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.odd.selected > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_3 {
+    background-color: #a9b7d1; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+    background-color: #fafafa; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even > .sorting_2 {
+    background-color: #fcfcfc; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even > .sorting_3 {
+    background-color: #fefefe; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even.selected > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_1 {
+    background-color: #acbad5; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even.selected > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_2 {
+    background-color: #aebcd6; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr.even.selected > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_3 {
+    background-color: #afbdd8; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+    background-color: #eaeaea; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover > .sorting_2 {
+    background-color: #ececec; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover > .sorting_3 {
+    background-color: #efefef; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover.selected > .sorting_1, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1 {
+    background-color: #a2aec7; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover.selected > .sorting_2, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2 {
+    background-color: #a3b0c9; }
+  
+  .realcrypto-table-wrap table.dataTable.display tbody tr:hover.selected > .sorting_3, .realcrypto-table-wrap table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
+    background-color: #a5b2cb; }
+  
+  .realcrypto-table-wrap table.dataTable.no-footer {
+    border-bottom: 1px solid #111; }
+  
+  .realcrypto-table-wrap table.dataTable.nowrap th, .realcrypto-table-wrap table.dataTable.nowrap td {
+    white-space: nowrap; }
+  
+  .realcrypto-table-wrap table.dataTable.compact thead th, .realcrypto-table-wrap table.dataTable.compact thead td {
+    padding: 4px 17px 4px 4px; }
+  
+  .realcrypto-table-wrap table.dataTable.compact tfoot th, .realcrypto-table-wrap table.dataTable.compact tfoot td {
+    padding: 4px; }
+  
+  .realcrypto-table-wrap table.dataTable.compact tbody th, .realcrypto-table-wrap table.dataTable.compact tbody td {
+    padding: 4px; }
+  
+  .realcrypto-table-wrap table.dataTable th.dt-left, .realcrypto-table-wrap table.dataTable td.dt-left {
+    text-align: left; }
+  
+  .realcrypto-table-wrap table.dataTable th.dt-center, .realcrypto-table-wrap table.dataTable td.dt-center, .realcrypto-table-wrap table.dataTable td.dataTables_empty {
+    text-align: center; }
+  
+  .realcrypto-table-wrap table.dataTable th.dt-right, .realcrypto-table-wrap table.dataTable td.dt-right {
+    text-align: right; }
+  
+  .realcrypto-table-wrap table.dataTable th.dt-justify, .realcrypto-table-wrap table.dataTable td.dt-justify {
+    text-align: justify; }
+  
+  .realcrypto-table-wrap table.dataTable th.dt-nowrap, .realcrypto-table-wrap table.dataTable td.dt-nowrap {
+    white-space: nowrap; }
+  
+  .realcrypto-table-wrap table.dataTable thead th.dt-head-left, .realcrypto-table-wrap table.dataTable thead td.dt-head-left, .realcrypto-table-wrap table.dataTable tfoot th.dt-head-left, .realcrypto-table-wrap table.dataTable tfoot td.dt-head-left {
+    text-align: left; }
+  
+  .realcrypto-table-wrap table.dataTable thead th.dt-head-center, .realcrypto-table-wrap table.dataTable thead td.dt-head-center, .realcrypto-table-wrap table.dataTable tfoot th.dt-head-center, .realcrypto-table-wrap table.dataTable tfoot td.dt-head-center {
+    text-align: center; }
+  
+  .realcrypto-table-wrap table.dataTable thead th.dt-head-right, .realcrypto-table-wrap table.dataTable thead td.dt-head-right, .realcrypto-table-wrap table.dataTable tfoot th.dt-head-right, .realcrypto-table-wrap table.dataTable tfoot td.dt-head-right {
+    text-align: right; }
+  
+  .realcrypto-table-wrap table.dataTable thead th.dt-head-justify, .realcrypto-table-wrap table.dataTable thead td.dt-head-justify, .realcrypto-table-wrap table.dataTable tfoot th.dt-head-justify, .realcrypto-table-wrap table.dataTable tfoot td.dt-head-justify {
+    text-align: justify; }
+  
+  .realcrypto-table-wrap table.dataTable thead th.dt-head-nowrap, .realcrypto-table-wrap table.dataTable thead td.dt-head-nowrap, .realcrypto-table-wrap table.dataTable tfoot th.dt-head-nowrap, .realcrypto-table-wrap table.dataTable tfoot td.dt-head-nowrap {
+    white-space: nowrap; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th.dt-body-left, .realcrypto-table-wrap table.dataTable tbody td.dt-body-left {
+    text-align: left; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th.dt-body-center, .realcrypto-table-wrap table.dataTable tbody td.dt-body-center {
+    text-align: center; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th.dt-body-right, .realcrypto-table-wrap table.dataTable tbody td.dt-body-right {
+    text-align: right; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th.dt-body-justify, .realcrypto-table-wrap table.dataTable tbody td.dt-body-justify {
+    text-align: justify; }
+  
+  .realcrypto-table-wrap table.dataTable tbody th.dt-body-nowrap, .realcrypto-table-wrap table.dataTable tbody td.dt-body-nowrap {
+    white-space: nowrap; }
+  
+  .realcrypto-table-wrap table.dataTable, .realcrypto-table-wrap table.dataTable th, .realcrypto-table-wrap table.dataTable td {
+    box-sizing: content-box; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper {
+    position: relative;
+    clear: both;
+    *zoom: 1;
+    zoom: 1; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_length {
+    float: left; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_filter input {
+    margin-left: 0.5em; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_info {
+    clear: both;
+    float: left;
+    padding-top: 0.755em; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+    padding-top: 0.25em; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    *cursor: hand;
+    color: #333 !important;
+    border: 1px solid transparent;
+    border-radius: 2px; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.current, .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #333 !important;
+    border: 1px solid #979797;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+    background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%); }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    cursor: default;
+    color: #666 !important;
+    border: 1px solid transparent;
+    background: transparent;
+    box-shadow: none; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid #111;
+    background-color: #585858;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+    background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
+    background: -moz-linear-gradient(top, #585858 0%, #111 100%);
+    background: -ms-linear-gradient(top, #585858 0%, #111 100%);
+    background: -o-linear-gradient(top, #585858 0%, #111 100%);
+    background: linear-gradient(to bottom, #585858 0%, #111 100%); }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    outline: none;
+    background-color: #2b2b2b;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));
+    background: -webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+    background: -moz-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+    background: -ms-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+    background: -o-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+    background: linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);
+    box-shadow: inset 0 0 3px #111; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .ellipsis {
+    padding: 0 1em; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 40px;
+    margin-left: -50%;
+    margin-top: -25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.9)), color-stop(75%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%); }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_length, .realcrypto-table-wrap .dataTables_wrapper .dataTables_filter, .realcrypto-table-wrap .dataTables_wrapper .dataTables_info, .realcrypto-table-wrap .dataTables_wrapper .dataTables_processing, .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate {
+    color: #333; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll {
+    clear: both; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+    *margin-top: -1px;
+    -webkit-overflow-scrolling: touch; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > th, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > td, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > th, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > td {
+    vertical-align: middle; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > th > div.dataTables_sizing, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > td > div.dataTables_sizing, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > th > div.dataTables_sizing, .realcrypto-table-wrap .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > td > div.dataTables_sizing {
+    height: 0;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 1px solid #111; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable, .realcrypto-table-wrap .dataTables_wrapper.no-footer div.dataTables_scrollBody > table {
+    border-bottom: none; }
+  
+  .realcrypto-table-wrap .dataTables_wrapper:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0; }
+  
+  @media screen and (max-width: 767px) {
+    .realcrypto-table-wrap .dataTables_wrapper .dataTables_info, .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate {
+      float: none;
+      text-align: center; }
+    .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate {
+      margin-top: 0.5em; } }
+  
+  @media screen and (max-width: 640px) {
+    .realcrypto-table-wrap .dataTables_wrapper .dataTables_length, .realcrypto-table-wrap .dataTables_wrapper .dataTables_filter {
+      float: none;
+      text-align: center; }
+    .realcrypto-table-wrap .dataTables_wrapper .dataTables_filter {
+      margin-top: 0.5em; } }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td.child,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > th.child,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty {
+    cursor: default !important; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td.child:before,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > th.child:before,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td.dataTables_empty:before {
+    display: none !important; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    top: 9px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    display: block;
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 14px;
+    content: '+';
+    background-color: #31b131; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    content: '-';
+    background-color: #d33333; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed > tbody > tr.child td:before {
+    display: none; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child {
+    padding-left: 27px; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child:before,
+  .realcrypto-table-wrap table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child:before {
+    top: 5px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    border-radius: 14px;
+    line-height: 14px;
+    text-indent: 3px; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr > td.control,
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr > th.control {
+    position: relative;
+    cursor: pointer; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr > td.control:before,
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr > th.control:before {
+    top: 50%;
+    left: 50%;
+    height: 16px;
+    width: 16px;
+    margin-top: -10px;
+    margin-left: -10px;
+    display: block;
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 14px;
+    content: '+';
+    background-color: #31b131; }
+  
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr.parent td.control:before,
+  .realcrypto-table-wrap table.dataTable.dtr-column > tbody > tr.parent th.control:before {
+    content: '-';
+    background-color: #d33333; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child {
+    padding: 0.5em 1em; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child:hover {
+    background: transparent !important; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child ul.dtr-details {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child ul.dtr-details li {
+    border-bottom: 1px solid #efefef;
+    padding: 0.5em 0; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child ul.dtr-details li:first-child {
+    padding-top: 0; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child ul.dtr-details li:last-child {
+    border-bottom: none; }
+  
+  .realcrypto-table-wrap table.dataTable > tbody > tr.child span.dtr-title {
+    display: inline-block;
+    min-width: 75px;
+    font-weight: bold; }
+  
+  .realcrypto-table-wrap div.dtr-modal {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    padding: 10em 1em; }
+  
+  .realcrypto-table-wrap div.dtr-modal div.dtr-modal-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    z-index: 102;
+    overflow: auto;
+    background-color: #f5f5f7;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); }
+  
+  .realcrypto-table-wrap div.dtr-modal div.dtr-modal-content {
+    position: relative;
+    padding: 1em; }
+  
+  .realcrypto-table-wrap div.dtr-modal div.dtr-modal-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 12; }
+  
+  .realcrypto-table-wrap div.dtr-modal div.dtr-modal-close:hover {
+    background-color: #eaeaea; }
+  
+  .realcrypto-table-wrap div.dtr-modal div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgba(0, 0, 0, 0.6); }
+  
+  @media screen and (max-width: 767px) {
+    .realcrypto-table-wrap div.dtr-modal div.dtr-modal-display {
+      width: 95%; } }
+  
+  .rc-mobile-show {
+    display: inline-block; }
+    @media (min-width: 768px) {
+      .rc-mobile-show {
+        display: none; } }
+  
+  html .realcrypto-table-wrap {
+    margin-bottom: 30px; }
+    html .realcrypto-table-wrap label, html .realcrypto-table-wrap .dataTables_info, html .realcrypto-table-wrap .dataTables_paginate {
+      font-weight: bold; }
+    html .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+    html .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+    html .realcrypto-table-wrap .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+      color: #333 !important;
+      border: 1px solid #e3e3e3;
+      background: #e3e3e3; }
+    html .realcrypto-table-wrap .dataTables_length select {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border-radius: 3px;
+      border: 1px solid #e3e3e3;
+      background: transparent;
+      -webkit-transition: border-color 0.7s linear;
+      -moz-transition: border-color 0.7s linear;
+      -ms-transition: border-color 0.7s linear;
+      -o-transition: border-color 0.7s linear;
+      transition: border-color 0.7s linear;
+      -webkit-appearance: menulist;
+      display: inline-block;
+      height: 31px; }
+      html .realcrypto-table-wrap .dataTables_length select:focus {
+        border-color: #aaa; }
+    html .realcrypto-table-wrap .dataTables_filter input {
+      padding: 5px 10px;
+      border-radius: 3px;
+      border: 1px solid #e3e3e3;
+      -webkit-transition: border-color 0.7s linear;
+      -moz-transition: border-color 0.7s linear;
+      -ms-transition: border-color 0.7s linear;
+      -o-transition: border-color 0.7s linear;
+      transition: border-color 0.7s linear; }
+      html .realcrypto-table-wrap .dataTables_filter input:focus {
+        border-color: #aaa; }
+    html .realcrypto-table-wrap .dataTables_filter, html .realcrypto-table-wrap .dataTables_length {
+      padding: 15px 0; }
+    html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child {
+      text-align: left !important; }
+      html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child > ul li {
+        border: none; }
+        html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child > ul li span.dtr-title {
+          min-width: 100px;
+          font-weight: 700; }
+        html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child > ul li span.dtr-data {
+          font-weight: 400; }
+          html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child > ul li span.dtr-data span {
+            display: inline; }
+          html .realcrypto-table-wrap .dtr-inline.collapsed > tbody > tr > td.child > ul li span.dtr-data .rc-sparkchart-24h {
+            display: none !important; }
+    html .realcrypto-table-wrap .realcrypto-table {
+      margin-bottom: 30px !important;
+      font-size: 14px;
+      padding-top: 15px;
+      border-collapse: collapse;
+      border-spacing: 0;
+      padding-top: 15px;
+      border-width: 0 !important; }
+      html .realcrypto-table-wrap .realcrypto-table tr {
+        -webkit-transition: background-color 0.7s linear;
+        -moz-transition: background-color 0.7s linear;
+        -ms-transition: background-color 0.7s linear;
+        -o-transition: background-color 0.7s linear;
+        transition: background-color 0.7s linear; }
+        html .realcrypto-table-wrap .realcrypto-table tr td, html .realcrypto-table-wrap .realcrypto-table tr th {
+          -webkit-transition: color 0.5s linear;
+          -moz-transition: color 0.5s linear;
+          -ms-transition: color 0.5s linear;
+          -o-transition: color 0.5s linear;
+          transition: color 0.5s linear;
+          border-width: 0; }
+      html .realcrypto-table-wrap .realcrypto-table thead tr td,
+      html .realcrypto-table-wrap .realcrypto-table thead tr th {
+        font-size: 14px;
+        font-weight: bold;
+        color: #343434;
+        text-align: left; }
+        html .realcrypto-table-wrap .realcrypto-table thead tr td:first-child,
+        html .realcrypto-table-wrap .realcrypto-table thead tr th:first-child {
+          width: 20px; }
+        @media (max-width: 700px) {
+          html .realcrypto-table-wrap .realcrypto-table thead tr td.rc-name-wrap,
+          html .realcrypto-table-wrap .realcrypto-table thead tr th.rc-name-wrap {
+            max-width: 100px; } }
+      html .realcrypto-table-wrap .realcrypto-table tbody tr td {
+        padding: 10px 5px; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td:first-child {
+          font-weight: bold;
+          opacity: 0.8;
+          text-align: center !important; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-name-wrap {
+          white-space: nowrap; }
+          @media (max-width: 700px) {
+            html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-name-wrap {
+              max-width: 100px;
+              text-overflow: ellipsis;
+              overflow: hidden; } }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-coin-name {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 90px; }
+          html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-coin-name [class*='rc-coinname'] {
+            display: none; }
+          @media (min-width: 768px) {
+            html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-coin-name {
+              max-width: none; }
+              html .realcrypto-table-wrap .realcrypto-table tbody tr td.rc-coin-name [class*='rc-coinname'] {
+                display: inline-block; } }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td [class*='rc-image-'] {
+          display: inline-block;
+          vertical-align: middle;
+          height: 20px;
+          width: 20px;
+          background-size: cover;
+          margin-right: 7px; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td [class*='rc-wrap-CHANGE24HOURPCT'] {
+          display: block;
+          margin-bottom: 5px; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td strong {
+          opacity: 0.5; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td span {
+          white-space: nowrap; }
+        html .realcrypto-table-wrap .realcrypto-table tbody tr td .rc-sparklines {
+          max-height: 25px;
+          max-width: 120px; }
+    html .realcrypto-table-wrap.rc-highLightRealtime table.realcrypto-table tbody tr.rc-wrap-price.rc-up-color-now {
+      background-color: #eaffea; }
+    html .realcrypto-table-wrap.rc-highLightRealtime table.realcrypto-table tbody tr.rc-wrap-price.rc-down-color-now {
+      background-color: #ffeaea; }
+    html .realcrypto-table-wrap.rc-size-small table.realcrypto-table thead th, html .realcrypto-table-wrap.rc-size-small table.realcrypto-table thead td {
+      padding: 10px 18px; }
+    html .realcrypto-table-wrap.rc-size-small table.realcrypto-table tbody td {
+      padding: 8px 5px; }
+    html .realcrypto-table-wrap.rc-size-medium table.realcrypto-table thead th, html .realcrypto-table-wrap.rc-size-medium table.realcrypto-table thead td {
+      padding: 12px 18px; }
+    html .realcrypto-table-wrap.rc-size-medium table.realcrypto-table tbody td {
+      padding: 10px 7px; }
+    html .realcrypto-table-wrap.rc-size-large table.realcrypto-table thead th, html .realcrypto-table-wrap.rc-size-large table.realcrypto-table thead td {
+      padding: 16px 18px; }
+    html .realcrypto-table-wrap.rc-size-large table.realcrypto-table tbody td {
+      padding: 14px 10px; }
+    html .realcrypto-table-wrap.rc-hasBorder table.realcrypto-table td, html .realcrypto-table-wrap.rc-hasBorder table.realcrypto-table th {
+      border-width: 1px;
+      border-style: solid; }
+    html .realcrypto-table-wrap.rc-hasBorder table.realcrypto-table td:not(.rc-coin-name) {
+      text-align: right; }
+    html .realcrypto-table-wrap.rc-hasBorder-bottom-row table.realcrypto-table tr {
+      border-bottom-width: 1px;
+      border-bottom-style: solid; }
+    html .realcrypto-table-wrap.rc-hasBorder-bottom-row table.realcrypto-table tbody tr:nth-child(even):hover, html .realcrypto-table-wrap.rc-hasBorder-bottom-row table.realcrypto-table tbody tr:nth-child(odd):hover {
+      background-color: #ecf1f457; }
+    html .realcrypto-table-wrap.rc-hightLightEvenRowd-disable table.realcrypto-table tbody tr:nth-child(even) {
+      background: transparent; }
+    html .realcrypto-table-wrap.rc-color-white table.realcrypto-table {
+      background: #fff; }
+      html .realcrypto-table-wrap.rc-color-white table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-white table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-white table.realcrypto-table tr {
+        border-color: #ddd; }
+      html .realcrypto-table-wrap.rc-color-white table.realcrypto-table thead tr {
+        background: #eee; }
+      html .realcrypto-table-wrap.rc-color-white table.realcrypto-table tr {
+        background: #fff; }
+        html .realcrypto-table-wrap.rc-color-white table.realcrypto-table tr:nth-child(even) {
+          background: #f2f2f2; }
+    html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table {
+      background: transparent; }
+      html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table tr {
+        border-color: #ddd; }
+      html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table thead tr {
+        background: #eee; }
+      html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table tr {
+        background: transparent; }
+        html .realcrypto-table-wrap.rc-color-transparent table.realcrypto-table tr:nth-child(even) {
+          background: #f2f2f2; }
+    html .realcrypto-table-wrap.rc-color-red table.realcrypto-table {
+      background: #fff8f7; }
+      html .realcrypto-table-wrap.rc-color-red table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-red table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-red table.realcrypto-table tr {
+        border-color: #fccbc7; }
+      html .realcrypto-table-wrap.rc-color-red table.realcrypto-table thead tr {
+        background: #ea1c0d; }
+        html .realcrypto-table-wrap.rc-color-red table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-red table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-red table.realcrypto-table tr {
+        background: #fff8f7; }
+        html .realcrypto-table-wrap.rc-color-red table.realcrypto-table tr:nth-child(even) {
+          background: #fde1df; }
+    html .realcrypto-table-wrap.rc-color-red .rc-load-more .rc-btn {
+      border-color: #f44336;
+      background: #f77066;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-red .rc-load-more .rc-btn:hover {
+        background: #f44336; }
+    html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table {
+      background: #fbd8e4; }
+      html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table tr {
+        border-color: #f7a9c4; }
+      html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table thead tr {
+        background: #c1134e; }
+        html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table tr {
+        background: #fbd8e4; }
+        html .realcrypto-table-wrap.rc-color-pink table.realcrypto-table tr:nth-child(even) {
+          background: #f9c1d4; }
+    html .realcrypto-table-wrap.rc-color-pink .rc-load-more .rc-btn {
+      border-color: #e91e63;
+      background: #ee4c83;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-pink .rc-load-more .rc-btn:hover {
+        background: #e91e63; }
+    html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table {
+      background: #e6b5ee; }
+      html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table tr {
+        border-color: #d88be5; }
+      html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table thead tr {
+        background: #771e86; }
+        html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table tr {
+        background: #e6b5ee; }
+        html .realcrypto-table-wrap.rc-color-purple table.realcrypto-table tr:nth-child(even) {
+          background: #dfa0ea; }
+    html .realcrypto-table-wrap.rc-color-purple .rc-load-more .rc-btn {
+      border-color: #9c27b0;
+      background: #bc37d3;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-purple .rc-load-more .rc-btn:hover {
+        background: #9c27b0; }
+    html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table {
+      background: #daceef; }
+      html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table tr {
+        border-color: #bda7e3; }
+      html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table thead tr {
+        background: #512e90; }
+        html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table tr {
+        background: #daceef; }
+        html .realcrypto-table-wrap.rc-color-deep-purple table.realcrypto-table tr:nth-child(even) {
+          background: #cbbae9; }
+    html .realcrypto-table-wrap.rc-color-deep-purple .rc-load-more .rc-btn {
+      border-color: #673ab7;
+      background: #8259cb;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-deep-purple .rc-load-more .rc-btn:hover {
+        background: #673ab7; }
+    html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table {
+      background: #d1d6ef; }
+      html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table tr {
+        border-color: #abb4e2; }
+      html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table thead tr {
+        background: #32408f; }
+        html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table tr {
+        background: #d1d6ef; }
+        html .realcrypto-table-wrap.rc-color-indigo table.realcrypto-table tr:nth-child(even) {
+          background: #bec5e8; }
+    html .realcrypto-table-wrap.rc-color-indigo .rc-load-more .rc-btn {
+      border-color: #3f51b5;
+      background: #606fc7;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-indigo .rc-load-more .rc-btn:hover {
+        background: #3f51b5; }
+    html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table {
+      background: #e3f2fd; }
+      html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table tr {
+        border-color: #b2dbfb; }
+      html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table thead tr {
+        background: #0c7cd5; }
+        html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table tr {
+        background: #e3f2fd; }
+        html .realcrypto-table-wrap.rc-color-blue table.realcrypto-table tr:nth-child(even) {
+          background: #cae6fc; }
+    html .realcrypto-table-wrap.rc-color-blue .rc-load-more .rc-btn {
+      border-color: #2196f3;
+      background: #51adf6;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-blue .rc-load-more .rc-btn:hover {
+        background: #2196f3; }
+    html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table {
+      background: #c5ecfe; }
+      html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table tr {
+        border-color: #92dcfe; }
+      html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table thead tr {
+        background: #0286c2; }
+        html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table tr {
+        background: #c5ecfe; }
+        html .realcrypto-table-wrap.rc-color-light-blue table.realcrypto-table tr:nth-child(even) {
+          background: #ace4fe; }
+    html .realcrypto-table-wrap.rc-color-light-blue .rc-load-more .rc-btn {
+      border-color: #03a9f4;
+      background: #2ebcfc;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-light-blue .rc-load-more .rc-btn:hover {
+        background: #03a9f4; }
+    html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table {
+      background: #a1f4ff; }
+      html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table tr {
+        border-color: #6eefff; }
+      html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table thead tr {
+        background: #008fa1; }
+        html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table tr {
+        background: #a1f4ff; }
+        html .realcrypto-table-wrap.rc-color-cyan table.realcrypto-table tr:nth-child(even) {
+          background: #88f1ff; }
+    html .realcrypto-table-wrap.rc-color-cyan .rc-load-more .rc-btn {
+      border-color: #00bcd4;
+      background: #08e3ff;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-cyan .rc-load-more .rc-btn:hover {
+        background: #00bcd4; }
+    html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table {
+      background: #63fff0; }
+      html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table tr {
+        border-color: #30ffec; }
+      html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table thead tr {
+        background: #00635a; }
+        html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table tr {
+        background: #63fff0; }
+        html .realcrypto-table-wrap.rc-color-teal table.realcrypto-table tr:nth-child(even) {
+          background: #4affee; }
+    html .realcrypto-table-wrap.rc-color-teal .rc-load-more .rc-btn {
+      border-color: #009688;
+      background: #00c9b6;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-teal .rc-load-more .rc-btn:hover {
+        background: #009688; }
+    html .realcrypto-table-wrap.rc-color-green table.realcrypto-table {
+      background: #d9eeda; }
+      html .realcrypto-table-wrap.rc-color-green table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-green table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-green table.realcrypto-table tr {
+        border-color: #b5dfb7; }
+      html .realcrypto-table-wrap.rc-color-green table.realcrypto-table thead tr {
+        background: #3d8b40; }
+        html .realcrypto-table-wrap.rc-color-green table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-green table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-green table.realcrypto-table tr {
+        background: #d9eeda; }
+        html .realcrypto-table-wrap.rc-color-green table.realcrypto-table tr:nth-child(even) {
+          background: #c7e7c8; }
+    html .realcrypto-table-wrap.rc-color-green .rc-load-more .rc-btn {
+      border-color: #4caf50;
+      background: #6ec071;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-green .rc-load-more .rc-btn:hover {
+        background: #4caf50; }
+    html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table {
+      background: #edf6e3; }
+      html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table tr {
+        border-color: #d5e9bd; }
+      html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table thead tr {
+        background: #71a436; }
+        html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table tr {
+        background: #edf6e3; }
+        html .realcrypto-table-wrap.rc-color-light-green table.realcrypto-table tr:nth-child(even) {
+          background: #e1efd0; }
+    html .realcrypto-table-wrap.rc-color-light-green .rc-load-more .rc-btn {
+      border-color: #8bc34a;
+      background: #a4d070;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-light-green .rc-load-more .rc-btn:hover {
+        background: #8bc34a; }
+    html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table {
+      background: #f9fbe6; }
+      html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table tr {
+        border-color: #eef3bb; }
+      html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table thead tr {
+        background: #b2c022; }
+        html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table tr {
+        background: #f9fbe6; }
+        html .realcrypto-table-wrap.rc-color-lime table.realcrypto-table tr:nth-child(even) {
+          background: #f3f7d1; }
+    html .realcrypto-table-wrap.rc-color-lime .rc-load-more .rc-btn {
+      border-color: #cddc39;
+      background: #d8e464;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-lime .rc-load-more .rc-btn:hover {
+        background: #cddc39; }
+    html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table {
+      background: white; }
+      html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table tr {
+        border-color: #fffbd4; }
+      html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table thead tr {
+        background: #ffe608; }
+        html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table tr {
+        background: white; }
+        html .realcrypto-table-wrap.rc-color-yellow table.realcrypto-table tr:nth-child(even) {
+          background: #fffdee; }
+    html .realcrypto-table-wrap.rc-color-yellow .rc-load-more .rc-btn {
+      border-color: #ffeb3b;
+      background: #fff06e;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-yellow .rc-load-more .rc-btn:hover {
+        background: #ffeb3b; }
+    html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table {
+      background: #fff4d3; }
+      html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table tr {
+        border-color: #ffe7a0; }
+      html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table thead tr {
+        background: #d39e00; }
+        html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table tr {
+        background: #fff4d3; }
+        html .realcrypto-table-wrap.rc-color-amber table.realcrypto-table tr:nth-child(even) {
+          background: #ffeeba; }
+    html .realcrypto-table-wrap.rc-color-amber .rc-load-more .rc-btn {
+      border-color: #ffc107;
+      background: #ffce3a;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-amber .rc-load-more .rc-btn:hover {
+        background: #ffc107; }
+    html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table {
+      background: #ffeacc; }
+      html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table tr {
+        border-color: #ffd699; }
+      html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table thead tr {
+        background: #cc7a00; }
+        html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table tr {
+        background: #ffeacc; }
+        html .realcrypto-table-wrap.rc-color-orange table.realcrypto-table tr:nth-child(even) {
+          background: #ffe0b3; }
+    html .realcrypto-table-wrap.rc-color-orange .rc-load-more .rc-btn {
+      border-color: #ff9800;
+      background: #ffad33;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-orange .rc-load-more .rc-btn:hover {
+        background: #ff9800; }
+    html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table {
+      background: #fff2ee; }
+      html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table tr {
+        border-color: #ffcbbb; }
+      html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table thead tr {
+        background: #ee3900; }
+        html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table tr {
+        background: #fff2ee; }
+        html .realcrypto-table-wrap.rc-color-deep-orange table.realcrypto-table tr:nth-child(even) {
+          background: #ffdfd5; }
+    html .realcrypto-table-wrap.rc-color-deep-orange .rc-load-more .rc-btn {
+      border-color: #ff5722;
+      background: #ff7e55;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-deep-orange .rc-load-more .rc-btn:hover {
+        background: #ff5722; }
+    html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table {
+      background: #d5c0b8; }
+      html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table tr {
+        border-color: #c2a398; }
+      html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table thead tr {
+        background: #593f35; }
+        html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table tr {
+        background: #d5c0b8; }
+        html .realcrypto-table-wrap.rc-color-brown table.realcrypto-table tr:nth-child(even) {
+          background: #cbb1a8; }
+    html .realcrypto-table-wrap.rc-color-brown .rc-load-more .rc-btn {
+      border-color: #795548;
+      background: #996b5b;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-brown .rc-load-more .rc-btn:hover {
+        background: #795548; }
+    html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table {
+      background: white; }
+      html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table tr {
+        border-color: #ebebeb; }
+      html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table thead tr {
+        background: #858585; }
+        html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table tr {
+        background: white; }
+        html .realcrypto-table-wrap.rc-color-grey table.realcrypto-table tr:nth-child(even) {
+          background: #f7f7f7; }
+    html .realcrypto-table-wrap.rc-color-grey .rc-load-more .rc-btn {
+      border-color: #9e9e9e;
+      background: #b8b8b8;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-grey .rc-load-more .rc-btn:hover {
+        background: #9e9e9e; }
+    html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table {
+      background: #d5dee2; }
+      html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table td, html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table th, html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table tr {
+        border-color: #b7c6cd; }
+      html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table thead tr {
+        background: #4b626d; }
+        html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table thead tr td, html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table thead tr th {
+          color: #fff; }
+      html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table tr {
+        background: #d5dee2; }
+        html .realcrypto-table-wrap.rc-color-blue-grey table.realcrypto-table tr:nth-child(even) {
+          background: #c6d2d8; }
+    html .realcrypto-table-wrap.rc-color-blue-grey .rc-load-more .rc-btn {
+      border-color: #607d8b;
+      background: #7b96a3;
+      color: #fff; }
+      html .realcrypto-table-wrap.rc-color-blue-grey .rc-load-more .rc-btn:hover {
+        background: #607d8b; }
+    html .realcrypto-table-wrap .rc-load-more {
+      text-align: center; }
+      html .realcrypto-table-wrap .rc-load-more .rc-btn {
+        display: inline-block;
+        border-radius: 100px;
+        border: 1px solid #eee;
+        padding: 13px 45px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .3s; }
+        html .realcrypto-table-wrap .rc-load-more .rc-btn:hover {
+          background: #eee; }
+        html .realcrypto-table-wrap .rc-load-more .rc-btn.rc-loading:after {
+          content: '...'; }
+    html .realcrypto-table-wrap.rc-highlight .rc-wrap-price.rc-up-color .rc-highlight {
+      color: #6ca82e; }
+    html .realcrypto-table-wrap.rc-highlight .rc-wrap-price.rc-down-color .rc-highlight {
+      color: #ce5c5c; }
+    html .realcrypto-table-wrap.rc-highlight span.rc-up-color {
+      color: #6ca82e; }
+    html .realcrypto-table-wrap.rc-highlight span.rc-down-color {
+      color: #ce5c5c; }
+  
+  .realcrypto-ticker-wrap .realcrypto-ticker-inside {
+    width: 100%;
+    overflow: hidden; }
+    .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap {
+      margin-right: 15px; }
+      .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap .rc-up-color.rc-arrow-down, .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap .rc-up-color .rc-arrow-down {
+        display: none; }
+      .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap .rc-down-color.rc-arrow-up, .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap .rc-down-color .rc-arrow-up {
+        display: none; }
+      .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap [class*="rc-image"] {
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        vertical-align: middle;
+        background-size: contain; }
+      .realcrypto-ticker-wrap .realcrypto-ticker-inside .rc-single-ticker-wrap .dashicons {
+        font-size: 1rem;
+        line-height: 1;
+        height: auto;
+        vertical-align: middle;
+        width: auto; }
+  
+  .realcrypto-ticker-wrap.rc-highlight .rc-up-color, .realcrypto-ticker-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-ticker-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-ticker-wrap.rc-highlight .rc-down-color, .realcrypto-ticker-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-ticker-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-ticker-wrap.rc-color-transparent {
+    background: transparent; }
+  
+  .realcrypto-ticker-wrap.rc-color-red:not(.rc-hasbg) {
+    color: #ea1c0d; }
+  
+  .realcrypto-ticker-wrap.rc-color-red.rc-hasbg {
+    background: #f44336;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-pink:not(.rc-hasbg) {
+    color: #c1134e; }
+  
+  .realcrypto-ticker-wrap.rc-color-pink.rc-hasbg {
+    background: #e91e63;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-purple:not(.rc-hasbg) {
+    color: #771e86; }
+  
+  .realcrypto-ticker-wrap.rc-color-purple.rc-hasbg {
+    background: #9c27b0;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-deep-purple:not(.rc-hasbg) {
+    color: #512e90; }
+  
+  .realcrypto-ticker-wrap.rc-color-deep-purple.rc-hasbg {
+    background: #673ab7;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-indigo:not(.rc-hasbg) {
+    color: #32408f; }
+  
+  .realcrypto-ticker-wrap.rc-color-indigo.rc-hasbg {
+    background: #3f51b5;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-blue:not(.rc-hasbg) {
+    color: #0c7cd5; }
+  
+  .realcrypto-ticker-wrap.rc-color-blue.rc-hasbg {
+    background: #2196f3;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-light-blue:not(.rc-hasbg) {
+    color: #0286c2; }
+  
+  .realcrypto-ticker-wrap.rc-color-light-blue.rc-hasbg {
+    background: #03a9f4;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-cyan:not(.rc-hasbg) {
+    color: #008fa1; }
+  
+  .realcrypto-ticker-wrap.rc-color-cyan.rc-hasbg {
+    background: #00bcd4;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-teal:not(.rc-hasbg) {
+    color: #00635a; }
+  
+  .realcrypto-ticker-wrap.rc-color-teal.rc-hasbg {
+    background: #009688;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-green:not(.rc-hasbg) {
+    color: #3d8b40; }
+  
+  .realcrypto-ticker-wrap.rc-color-green.rc-hasbg {
+    background: #4caf50;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-light-green:not(.rc-hasbg) {
+    color: #71a436; }
+  
+  .realcrypto-ticker-wrap.rc-color-light-green.rc-hasbg {
+    background: #8bc34a;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-lime:not(.rc-hasbg) {
+    color: #b2c022; }
+  
+  .realcrypto-ticker-wrap.rc-color-lime.rc-hasbg {
+    background: #cddc39;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-yellow:not(.rc-hasbg) {
+    color: #ffe608; }
+  
+  .realcrypto-ticker-wrap.rc-color-yellow.rc-hasbg {
+    background: #ffeb3b;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-amber:not(.rc-hasbg) {
+    color: #d39e00; }
+  
+  .realcrypto-ticker-wrap.rc-color-amber.rc-hasbg {
+    background: #ffc107;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-orange:not(.rc-hasbg) {
+    color: #cc7a00; }
+  
+  .realcrypto-ticker-wrap.rc-color-orange.rc-hasbg {
+    background: #ff9800;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-deep-orange:not(.rc-hasbg) {
+    color: #ee3900; }
+  
+  .realcrypto-ticker-wrap.rc-color-deep-orange.rc-hasbg {
+    background: #ff5722;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-brown:not(.rc-hasbg) {
+    color: #593f35; }
+  
+  .realcrypto-ticker-wrap.rc-color-brown.rc-hasbg {
+    background: #795548;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-grey:not(.rc-hasbg) {
+    color: #858585; }
+  
+  .realcrypto-ticker-wrap.rc-color-grey.rc-hasbg {
+    background: #9e9e9e;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-ticker-wrap.rc-color-blue-grey:not(.rc-hasbg) {
+    color: #4b626d; }
+  
+  .realcrypto-ticker-wrap.rc-color-blue-grey.rc-hasbg {
+    background: #607d8b;
+    color: #fff;
+    padding: 5px 0; }
+  
+  .realcrypto-inline-wrap .rc-single-inline-wrap .rc-up-color.rc-arrow-down, .realcrypto-inline-wrap .rc-single-inline-wrap .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-inline-wrap .rc-single-inline-wrap .rc-down-color.rc-arrow-up, .realcrypto-inline-wrap .rc-single-inline-wrap .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-inline-wrap .rc-single-inline-wrap .dashicons {
+    font-size: 1rem;
+    line-height: 1;
+    height: auto;
+    vertical-align: middle;
+    width: auto; }
+  
+  .realcrypto-inline-wrap .rc-single-inline-wrap [class*="rc-image"] {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    background-size: contain;
+    margin-left: 5px; }
+  
+  .realcrypto-inline-wrap.rc-highlight .rc-up-color, .realcrypto-inline-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-inline-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-inline-wrap.rc-highlight .rc-down-color, .realcrypto-inline-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-inline-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-inline-wrap.rc-color-transparent {
+    background: transparent; }
+  
+  .realcrypto-inline-wrap.rc-color-red {
+    color: #f44336; }
+  
+  .realcrypto-inline-wrap.rc-color-pink {
+    color: #e91e63; }
+  
+  .realcrypto-inline-wrap.rc-color-purple {
+    color: #9c27b0; }
+  
+  .realcrypto-inline-wrap.rc-color-deep-purple {
+    color: #673ab7; }
+  
+  .realcrypto-inline-wrap.rc-color-indigo {
+    color: #3f51b5; }
+  
+  .realcrypto-inline-wrap.rc-color-blue {
+    color: #2196f3; }
+  
+  .realcrypto-inline-wrap.rc-color-light-blue {
+    color: #03a9f4; }
+  
+  .realcrypto-inline-wrap.rc-color-cyan {
+    color: #00bcd4; }
+  
+  .realcrypto-inline-wrap.rc-color-teal {
+    color: #009688; }
+  
+  .realcrypto-inline-wrap.rc-color-green {
+    color: #4caf50; }
+  
+  .realcrypto-inline-wrap.rc-color-light-green {
+    color: #8bc34a; }
+  
+  .realcrypto-inline-wrap.rc-color-lime {
+    color: #cddc39; }
+  
+  .realcrypto-inline-wrap.rc-color-yellow {
+    color: #ffeb3b; }
+  
+  .realcrypto-inline-wrap.rc-color-amber {
+    color: #ffc107; }
+  
+  .realcrypto-inline-wrap.rc-color-orange {
+    color: #ff9800; }
+  
+  .realcrypto-inline-wrap.rc-color-deep-orange {
+    color: #ff5722; }
+  
+  .realcrypto-inline-wrap.rc-color-brown {
+    color: #795548; }
+  
+  .realcrypto-inline-wrap.rc-color-grey {
+    color: #9e9e9e; }
+  
+  .realcrypto-inline-wrap.rc-color-blue-grey {
+    color: #607d8b; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 {
+    color: #fff; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside {
+      box-shadow: 0rem 0.2rem 1.5rem 0rem rgba(0, 0, 0, 0.13);
+      overflow: hidden;
+      position: relative;
+      background: url(../../assets/images/bg-box.jpg);
+      background-size: 100% auto;
+      background-position: center center; }
+      .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .dashicons {
+        font-size: 1.5rem;
+        vertical-align: middle;
+        margin-bottom: 5px; }
+      .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info {
+        z-index: 10;
+        display: flex;
+        text-align: left;
+        display: flex; }
+        .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info {
+          flex: 3;
+          padding: 1.5rem;
+          white-space: nowrap; }
+          .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info [class*='rc-image-'] {
+            display: inline-block;
+            vertical-align: middle;
+            height: 22px;
+            width: 22px;
+            background-size: cover;
+            margin-right: 5px; }
+          .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info [class*='rc-coinname'] {
+            font-weight: 500;
+            margin: 0;
+            vertical-align: middle;
+            margin-bottom: 1rem; }
+          .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info [class*='rc-name'] {
+            font-weight: bold;
+            margin: 0;
+            vertical-align: middle;
+            font-size: 1.5rem; }
+          .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info .rc-price-wrap {
+            font-size: 1.5rem;
+            margin: 0;
+            margin-bottom: 10px;
+            margin-top: 5px; }
+            @media (max-width: 700px) {
+              .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-left-info .rc-price-wrap {
+                font-size: 1rem; } }
+        .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param {
+          flex: 2;
+          background: rgba(255, 255, 255, 0.3);
+          display: flex;
+          flex-direction: column;
+          white-space: nowrap; }
+          .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param .elm-param {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            flex: 1;
+            align-items: center;
+            padding: 0 1.5rem; }
+            @media (max-width: 700px) {
+              .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param .elm-param b {
+                display: none; }
+              .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param .elm-param div {
+                text-align: left; } }
+            .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param .elm-param div {
+              text-align: right;
+              margin: 0;
+              font-size: 1rem;
+              width: 100%; }
+            .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_1 .wrapper-inside .rc-info .rc-right-param .elm-param:last-child {
+              border: none; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside {
+    padding: 1.5rem;
+    padding-bottom: 1.8rem; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .dashicons {
+      margin-top: 3px;
+      font-size: 1.4rem; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside [class*='rc-image-'] {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-size: cover;
+      margin-right: 5px; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-info .rc-name {
+      margin: 0;
+      font-size: 1.4rem; }
+      .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-info .rc-name span {
+        vertical-align: middle; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-info .rc-price, .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-info .rc-change-wrap {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      display: inline-block;
+      margin-right: 1rem; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-info .rc-price {
+      margin-top: 7px;
+      margin-bottom: 7px; }
+    .realcrypto-leaderboard-wrap.rc-leaderboard-style-advanced_2 .rc-wrapper-inside .rc-more-param .elm-param {
+      display: inline-block;
+      margin-right: 10px; }
+  
+  .rc-col-1 {
+    width: 8.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-2 {
+    width: 16.667%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-3 {
+    width: 25%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-4 {
+    width: 33.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-5 {
+    width: 41.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-6 {
+    width: 50%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-7 {
+    width: 58.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-8 {
+    width: 66.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-9 {
+    width: 75%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-10 {
+    width: 83.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-11 {
+    width: 91.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-12 {
+    width: 100%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap {
+    margin-bottom: 30px; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-up-color.rc-arrow-down, .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-up-color .rc-arrow-down {
+      display: none; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-down-color.rc-arrow-up, .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-down-color .rc-arrow-up {
+      display: none; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap [class*='rc-image-'] {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-size: cover;
+      margin-right: 5px; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-pos-top {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      display: flex; }
+      .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-pos-top .rc-pos-left span {
+        display: inline-block;
+        vertical-align: middle; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-pos-bottom {
+      display: flex; }
+    .realcrypto-leaderboard-wrap .rc-single-leaderboard-wrap .rc-pos-left {
+      flex-grow: 1; }
+  
+  .realcrypto-leaderboard-wrap.rc-highlight .rc-up-color, .realcrypto-leaderboard-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-leaderboard-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-leaderboard-wrap.rc-highlight .rc-down-color, .realcrypto-leaderboard-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-leaderboard-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboard-shadow .rc-single-leaderboard-wrap {
+    box-shadow: 0rem 0.2rem 1.5rem 0rem rgba(0, 0, 0, 0.13); }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboard-border .rc-single-leaderboard-wrap {
+    border: 1px solid #eee; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboardshape-square .rc-single-leaderboard-wrap {
+    border-radius: 0; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboardshape-rounded .rc-single-leaderboard-wrap {
+    border-radius: 5px;
+    overflow: hidden; }
+  
+  .realcrypto-leaderboard-wrap.rc-leaderboardshape-round .rc-single-leaderboard-wrap {
+    border-radius: 20px;
+    overflow: hidden; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-red {
+    color: #f44336; }
+    .realcrypto-leaderboard-wrap.rc-color-red .rc-single-leaderboard-wrap {
+      border-color: #f44336; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-pink {
+    color: #e91e63; }
+    .realcrypto-leaderboard-wrap.rc-color-pink .rc-single-leaderboard-wrap {
+      border-color: #e91e63; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-purple {
+    color: #9c27b0; }
+    .realcrypto-leaderboard-wrap.rc-color-purple .rc-single-leaderboard-wrap {
+      border-color: #9c27b0; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-deep-purple {
+    color: #673ab7; }
+    .realcrypto-leaderboard-wrap.rc-color-deep-purple .rc-single-leaderboard-wrap {
+      border-color: #673ab7; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-indigo {
+    color: #3f51b5; }
+    .realcrypto-leaderboard-wrap.rc-color-indigo .rc-single-leaderboard-wrap {
+      border-color: #3f51b5; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-blue {
+    color: #2196f3; }
+    .realcrypto-leaderboard-wrap.rc-color-blue .rc-single-leaderboard-wrap {
+      border-color: #2196f3; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-light-blue {
+    color: #03a9f4; }
+    .realcrypto-leaderboard-wrap.rc-color-light-blue .rc-single-leaderboard-wrap {
+      border-color: #03a9f4; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-cyan {
+    color: #00bcd4; }
+    .realcrypto-leaderboard-wrap.rc-color-cyan .rc-single-leaderboard-wrap {
+      border-color: #00bcd4; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-teal {
+    color: #009688; }
+    .realcrypto-leaderboard-wrap.rc-color-teal .rc-single-leaderboard-wrap {
+      border-color: #009688; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-green {
+    color: #4caf50; }
+    .realcrypto-leaderboard-wrap.rc-color-green .rc-single-leaderboard-wrap {
+      border-color: #4caf50; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-light-green {
+    color: #8bc34a; }
+    .realcrypto-leaderboard-wrap.rc-color-light-green .rc-single-leaderboard-wrap {
+      border-color: #8bc34a; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-lime {
+    color: #cddc39; }
+    .realcrypto-leaderboard-wrap.rc-color-lime .rc-single-leaderboard-wrap {
+      border-color: #cddc39; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-yellow {
+    color: #ffeb3b; }
+    .realcrypto-leaderboard-wrap.rc-color-yellow .rc-single-leaderboard-wrap {
+      border-color: #ffeb3b; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-amber {
+    color: #ffc107; }
+    .realcrypto-leaderboard-wrap.rc-color-amber .rc-single-leaderboard-wrap {
+      border-color: #ffc107; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-orange {
+    color: #ff9800; }
+    .realcrypto-leaderboard-wrap.rc-color-orange .rc-single-leaderboard-wrap {
+      border-color: #ff9800; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-deep-orange {
+    color: #ff5722; }
+    .realcrypto-leaderboard-wrap.rc-color-deep-orange .rc-single-leaderboard-wrap {
+      border-color: #ff5722; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-brown {
+    color: #795548; }
+    .realcrypto-leaderboard-wrap.rc-color-brown .rc-single-leaderboard-wrap {
+      border-color: #795548; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-grey {
+    color: #9e9e9e; }
+    .realcrypto-leaderboard-wrap.rc-color-grey .rc-single-leaderboard-wrap {
+      border-color: #9e9e9e; }
+  
+  .realcrypto-leaderboard-wrap.rc-color-blue-grey {
+    color: #607d8b; }
+    .realcrypto-leaderboard-wrap.rc-color-blue-grey .rc-single-leaderboard-wrap {
+      border-color: #607d8b; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap {
+    display: inline-flex;
+    background-color: #fff; }
+    @media (max-width: 700px) {
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap {
+        display: block; } }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-sparkchart-inside {
+      display: flex;
+      align-items: center;
+      padding: 15px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-pos-right {
+      flex-grow: 1; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-ic-coin {
+      padding-right: 15px;
+      padding-left: 5px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap [class*='rc-image-'] {
+      display: block;
+      height: 64px;
+      width: 64px;
+      background-position: 0 0;
+      background-size: 100% 100%; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-top {
+      display: flex;
+      align-items: center; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-top .rc-name {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-main-sparkchart span {
+      width: 100%;
+      height: 100%; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-info {
+      margin-top: 5px; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-info .rc-lbl {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0 0 0.5rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-info .rc-price {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.8rem; }
+        .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-info .rc-price * {
+          font-size: 1.8rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-classic .rc-single-sparkchart-wrap .rc-info .rc-24h {
+        margin: 0; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap {
+    display: inline-block;
+    background-color: #fff; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-sparkchart-inside {
+      display: flex;
+      align-items: center;
+      padding: 15px 15px 10px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-pos-left {
+      flex-grow: 1; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap [class*='rc-image-'] {
+      display: block;
+      height: 64px;
+      width: 64px;
+      background-position: 0 0;
+      background-size: 100% 100%; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-top {
+      display: flex;
+      align-items: center; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-top .rc-name {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-main-sparkchart span {
+      width: 100%;
+      height: 3rem; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-info {
+      margin-top: 5px; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-info .rc-lbl {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0 0 0.5rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-info .rc-price {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.8rem; }
+        .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-info .rc-price * {
+          font-size: 1.8rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_1 .rc-single-sparkchart-wrap .rc-info .rc-24h {
+        margin: 0; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap {
+    display: inline-block;
+    background-color: #fff; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-sparkchart-inside {
+      display: flex;
+      align-items: center;
+      padding: 15px 15px 10px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-pos-right {
+      flex-grow: 1; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-ic-coin {
+      padding-right: 15px;
+      padding-left: 5px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap [class*='rc-image-'] {
+      display: block;
+      height: 64px;
+      width: 64px;
+      background-position: 0 0;
+      background-size: 100% 100%; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-top {
+      display: flex;
+      align-items: center; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-top .rc-name {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-main-sparkchart span {
+      width: 100%;
+      height: 3rem; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-info {
+      margin-top: 5px; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-info .rc-lbl {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0 0 0.5rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-info .rc-price {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.8rem; }
+        .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-info .rc-price * {
+          font-size: 1.8rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_2 .rc-single-sparkchart-wrap .rc-info .rc-24h {
+        margin: 0; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_3 .rc-single-sparkchart-wrap {
+    display: inline-block;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 1.2rem; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_3 .rc-single-sparkchart-wrap .rc-main-sparkchart {
+      width: 120px;
+      display: inline-block; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap {
+    display: inline-block;
+    background-color: #fff; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-sparkchart-inside {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #eee; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-pos-right {
+      flex-grow: 1;
+      padding-bottom: 7px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-ic-coin {
+      padding-right: 15px;
+      padding-left: 5px; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-name-top {
+      white-space: nowrap; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap [class*='rc-image-'] {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-position: 0 0;
+      background-size: 100% 100%; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-name {
+      margin: 0;
+      margin-top: 7px;
+      font-size: 1.1rem;
+      font-weight: 500; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-top {
+      display: flex;
+      align-items: center; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-main-sparkchart span {
+      width: 100%;
+      height: 3rem; }
+    .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-info {
+      margin-top: 5px;
+      text-align: right; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-info .rc-lbl {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0 0 0.5rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-info .rc-price {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.8rem; }
+        .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-info .rc-price * {
+          font-size: 1.8rem; }
+      .realcrypto-sparkchart-wrap.rc-sparkchart-style-advanced_4 .rc-single-sparkchart-wrap .rc-info .rc-24h {
+        margin: 0; }
+  
+  .rc-col-1 {
+    width: 8.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-2 {
+    width: 16.667%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-3 {
+    width: 25%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-4 {
+    width: 33.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-5 {
+    width: 41.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-6 {
+    width: 50%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-7 {
+    width: 58.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-8 {
+    width: 66.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-9 {
+    width: 75%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-10 {
+    width: 83.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-11 {
+    width: 91.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-12 {
+    width: 100%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap .rc-up-color.rc-arrow-down, .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap .rc-down-color.rc-arrow-up, .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap [class*='rc-image-'] {
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    margin-right: 7px; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap span {
+    display: inline-block;
+    vertical-align: middle; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap [class*='rc-name'], .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap [class*='rc-coinname'] {
+    font-weight: bold; }
+  
+  .realcrypto-sparkchart-wrap .rc-single-sparkchart-wrap canvas {
+    min-width: 120px; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-shape-square .rc-single-sparkchart-wrap {
+    border-radius: 0; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-shape-rounded .rc-single-sparkchart-wrap {
+    overflow: hidden;
+    border-radius: 5px; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-shape-round .rc-single-sparkchart-wrap {
+    border-radius: 20px;
+    overflow: hidden; }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-shadow .rc-single-sparkchart-wrap {
+    box-shadow: 0rem 0.2rem 1.5rem 0rem rgba(0, 0, 0, 0.13); }
+  
+  .realcrypto-sparkchart-wrap.rc-sparkchart-border .rc-single-sparkchart-wrap {
+    border: 1px solid #eee; }
+  
+  .realcrypto-sparkchart-wrap.rc-highlight .rc-up-color, .realcrypto-sparkchart-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-sparkchart-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-sparkchart-wrap.rc-highlight .rc-down-color, .realcrypto-sparkchart-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-sparkchart-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-red {
+    color: #f44336; }
+    .realcrypto-sparkchart-wrap.rc-color-red .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-red .rc-sparkchart-inside {
+      border-color: #f44336 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-pink {
+    color: #e91e63; }
+    .realcrypto-sparkchart-wrap.rc-color-pink .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-pink .rc-sparkchart-inside {
+      border-color: #e91e63 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-purple {
+    color: #9c27b0; }
+    .realcrypto-sparkchart-wrap.rc-color-purple .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-purple .rc-sparkchart-inside {
+      border-color: #9c27b0 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-deep-purple {
+    color: #673ab7; }
+    .realcrypto-sparkchart-wrap.rc-color-deep-purple .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-deep-purple .rc-sparkchart-inside {
+      border-color: #673ab7 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-indigo {
+    color: #3f51b5; }
+    .realcrypto-sparkchart-wrap.rc-color-indigo .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-indigo .rc-sparkchart-inside {
+      border-color: #3f51b5 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-blue {
+    color: #2196f3; }
+    .realcrypto-sparkchart-wrap.rc-color-blue .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-blue .rc-sparkchart-inside {
+      border-color: #2196f3 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-light-blue {
+    color: #03a9f4; }
+    .realcrypto-sparkchart-wrap.rc-color-light-blue .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-light-blue .rc-sparkchart-inside {
+      border-color: #03a9f4 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-cyan {
+    color: #00bcd4; }
+    .realcrypto-sparkchart-wrap.rc-color-cyan .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-cyan .rc-sparkchart-inside {
+      border-color: #00bcd4 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-teal {
+    color: #009688; }
+    .realcrypto-sparkchart-wrap.rc-color-teal .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-teal .rc-sparkchart-inside {
+      border-color: #009688 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-green {
+    color: #4caf50; }
+    .realcrypto-sparkchart-wrap.rc-color-green .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-green .rc-sparkchart-inside {
+      border-color: #4caf50 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-light-green {
+    color: #8bc34a; }
+    .realcrypto-sparkchart-wrap.rc-color-light-green .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-light-green .rc-sparkchart-inside {
+      border-color: #8bc34a !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-lime {
+    color: #cddc39; }
+    .realcrypto-sparkchart-wrap.rc-color-lime .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-lime .rc-sparkchart-inside {
+      border-color: #cddc39 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-yellow {
+    color: #ffeb3b; }
+    .realcrypto-sparkchart-wrap.rc-color-yellow .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-yellow .rc-sparkchart-inside {
+      border-color: #ffeb3b !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-amber {
+    color: #ffc107; }
+    .realcrypto-sparkchart-wrap.rc-color-amber .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-amber .rc-sparkchart-inside {
+      border-color: #ffc107 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-orange {
+    color: #ff9800; }
+    .realcrypto-sparkchart-wrap.rc-color-orange .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-orange .rc-sparkchart-inside {
+      border-color: #ff9800 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-deep-orange {
+    color: #ff5722; }
+    .realcrypto-sparkchart-wrap.rc-color-deep-orange .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-deep-orange .rc-sparkchart-inside {
+      border-color: #ff5722 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-brown {
+    color: #795548; }
+    .realcrypto-sparkchart-wrap.rc-color-brown .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-brown .rc-sparkchart-inside {
+      border-color: #795548 !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-grey {
+    color: #9e9e9e; }
+    .realcrypto-sparkchart-wrap.rc-color-grey .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-grey .rc-sparkchart-inside {
+      border-color: #9e9e9e !important; }
+  
+  .realcrypto-sparkchart-wrap.rc-color-blue-grey {
+    color: #607d8b; }
+    .realcrypto-sparkchart-wrap.rc-color-blue-grey .rc-single-sparkchart-wrap, .realcrypto-sparkchart-wrap.rc-color-blue-grey .rc-sparkchart-inside {
+      border-color: #607d8b !important; }
+  
+  .realcrypto-chart-wrap .rc-single-chart-wrap {
+    min-height: 160px;
+    position: relative; }
+    .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 30px; }
+      .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-left {
+        width: 44%;
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding-left: 40px; }
+        @media (max-width: 700px) {
+          .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-left {
+            font-size: 0;
+            padding-left: 0px; } }
+        .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-left [class*='rc-image-'] {
+          height: 32px;
+          width: 32px;
+          background-size: cover;
+          margin-right: 7px; }
+        .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-left span {
+          display: inline-block;
+          vertical-align: middle; }
+          @media (max-width: 700px) {
+            .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-left span {
+              display: block;
+              font-size: 1rem; } }
+      .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-right {
+        flex-grow: 1;
+        font-size: 1.4rem;
+        font-weight: bold; }
+        .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-right .rc-sub-info {
+          display: flex;
+          font-size: 1rem;
+          margin-top: 10px; }
+          .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-right .rc-sub-info > div {
+            width: 33.3333%; }
+            .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-right .rc-sub-info > div .rc-label {
+              font-weight: bold;
+              margin-bottom: 8px; }
+          .realcrypto-chart-wrap .rc-single-chart-wrap .rc-chart-title .rc-pos-right .rc-sub-info span {
+            display: block;
+            font-weight: 400; }
+  
+  .realcrypto-chart-wrap.rc-highlight .rc-up-color, .realcrypto-chart-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-chart-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-chart-wrap.rc-highlight .rc-down-color, .realcrypto-chart-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-chart-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-chart-wrap.rc-color-transparent {
+    background: transparent; }
+  
+  .realcrypto-chart-wrap.rc-color-red {
+    color: #ba160a; }
+  
+  .realcrypto-chart-wrap.rc-color-pink {
+    color: #930e3b; }
+  
+  .realcrypto-chart-wrap.rc-color-purple {
+    color: #52145d; }
+  
+  .realcrypto-chart-wrap.rc-color-deep-purple {
+    color: #3b216a; }
+  
+  .realcrypto-chart-wrap.rc-color-indigo {
+    color: #252f69; }
+  
+  .realcrypto-chart-wrap.rc-color-blue {
+    color: #0960a5; }
+  
+  .realcrypto-chart-wrap.rc-color-light-blue {
+    color: #02638f; }
+  
+  .realcrypto-chart-wrap.rc-color-cyan {
+    color: #00626e; }
+  
+  .realcrypto-chart-wrap.rc-color-teal {
+    color: #00302c; }
+  
+  .realcrypto-chart-wrap.rc-color-green {
+    color: #2d682f; }
+  
+  .realcrypto-chart-wrap.rc-color-light-green {
+    color: #577d2a; }
+  
+  .realcrypto-chart-wrap.rc-color-lime {
+    color: #89951a; }
+  
+  .realcrypto-chart-wrap.rc-color-yellow {
+    color: #d4be00; }
+  
+  .realcrypto-chart-wrap.rc-color-amber {
+    color: #a07800; }
+  
+  .realcrypto-chart-wrap.rc-color-orange {
+    color: #995b00; }
+  
+  .realcrypto-chart-wrap.rc-color-deep-orange {
+    color: #bb2d00; }
+  
+  .realcrypto-chart-wrap.rc-color-brown {
+    color: #392822; }
+  
+  .realcrypto-chart-wrap.rc-color-grey {
+    color: #6b6b6b; }
+  
+  .realcrypto-chart-wrap.rc-color-blue-grey {
+    color: #36474f; }
+  
+  .realcrypto-comparison-wrap .rc-comparisons-comparison-table {
+    font-size: 1rem;
+    margin-bottom: 1.5rem; }
+    .realcrypto-comparison-wrap .rc-comparisons-comparison-table * {
+      box-sizing: border-box;
+      border-width: 0; }
+    .realcrypto-comparison-wrap .rc-comparisons-comparison-table ul, .realcrypto-comparison-wrap .rc-comparisons-comparison-table li {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table {
+      position: relative;
+      overflow: hidden; }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .rc-comparisons-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-style: solid;
+        border-color: #e6e6e6;
+        border-width: 1px;
+        border-right-width: 0; }
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .rc-comparisons-wrapper .rc-comparisons-columns {
+          display: flex;
+          margin-left: 120px; }
+          .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .rc-comparisons-wrapper .rc-comparisons-columns .comparison {
+            position: relative;
+            flex-grow: 1;
+            min-width: 150px;
+            text-align: center;
+            -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+            -moz-transition: opacity 0.3s, visibility 0.3s, -moz-transform 0.3s;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            margin: 0;
+            padding: 0; }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .features {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 120px;
+        border-style: solid;
+        border-color: #e6e6e6;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        background-color: #fafafa;
+        opacity: .95; }
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .features .top-info {
+          font-size: 1rem;
+          font-weight: bold;
+          line-height: 14px;
+          padding: 25px 10px;
+          text-align: left; }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .rc-features-list div {
+        text-align: left;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1;
+        padding: 25px 10px;
+        text-align: center;
+        border-color: #e6e6e6;
+        border-style: solid;
+        border-top-width: 1px;
+        border-right-width: 1px; }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .top-info {
+        position: relative;
+        height: 130px;
+        text-align: center;
+        padding: 1.25em 0.5rem;
+        border-color: #e6e6e6;
+        border-style: solid;
+        border-right-width: 1px;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        transition: height 0.3s; }
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .top-info [class*='rc-image-'] {
+          display: inline-block;
+          vertical-align: middle;
+          height: 1.6rem;
+          width: 1.6rem;
+          background-size: cover;
+          margin-right: 8px; }
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .top-info [class*="rc-name-"] {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 1.6rem; }
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .top-info [class*="rc-PRICE-"] {
+          padding: 0.8rem 0 0.625rem;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin: 0 auto;
+          display: block; }
+          @media (min-width: 700px) {
+            .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-comparisons-table .top-info [class*="rc-PRICE-"] {
+              font-size: 2.8rem; } }
+    .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-table-navigation a {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 30%;
+      opacity: .5;
+      right: 15px;
+      -webkit-transform: translateY(55px);
+      -moz-transform: translateY(55px);
+      -ms-transform: translateY(55px);
+      -o-transform: translateY(55px);
+      transform: translateY(55px);
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      color: transparent;
+      height: 60px;
+      width: 40px;
+      background: rgba(64, 64, 66, 0.8) url(../images/rc-arrow.svg) no-repeat center center;
+      border-radius: 3px;
+      -webkit-transition: background-color 0.3s, opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+      -moz-transition: background-color 0.3s, opacity 0.3s, visibility 0.3s, -moz-transform 0.3s;
+      transition: background-color 0.3s, opacity 0.3s, visibility 0.3s, transform 0.3s; }
+      @media (max-width: 700px) {
+        .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-table-navigation a {
+          display: block; } }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-table-navigation a.inactive {
+        opacity: 0;
+        visibility: hidden; }
+      .realcrypto-comparison-wrap .rc-comparisons-comparison-table .rc-table-navigation a.prev {
+        left: 0;
+        right: auto;
+        -webkit-transform: translateY(55px) translateX(15px) rotate(180deg);
+        -moz-transform: translateY(55px) translateX(15px) rotate(180deg);
+        -ms-transform: translateY(55px) translateX(15px) rotate(180deg);
+        -o-transform: translateY(55px) translateX(15px) rotate(180deg);
+        transform: translateY(55px) translateX(15px) rotate(180deg); }
+  
+  .realcrypto-comparison-wrap.rc-highlight .rc-up-color, .realcrypto-comparison-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-comparison-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-comparison-wrap.rc-highlight .rc-down-color, .realcrypto-comparison-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-comparison-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-comparison-wrap.rc-color-red .rc-comparisons-comparison-table {
+    color: #590b05;
+    background: #fff8f7; }
+    .realcrypto-comparison-wrap.rc-color-red .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #fde1df; }
+    .realcrypto-comparison-wrap.rc-color-red .rc-comparisons-comparison-table * {
+      border-color: #f99d97 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-pink .rc-comparisons-comparison-table {
+    color: #360516;
+    background: #fbd8e4; }
+    .realcrypto-comparison-wrap.rc-color-pink .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #f9c1d4; }
+    .realcrypto-comparison-wrap.rc-color-pink .rc-comparisons-comparison-table * {
+      border-color: #f27ba3 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-purple .rc-comparisons-comparison-table {
+    color: #080209;
+    background: #e6b5ee; }
+    .realcrypto-comparison-wrap.rc-color-purple .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #dfa0ea; }
+    .realcrypto-comparison-wrap.rc-color-purple .rc-comparisons-comparison-table * {
+      border-color: #ca61dc !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-deep-purple .rc-comparisons-comparison-table {
+    color: #10091c;
+    background: #daceef; }
+    .realcrypto-comparison-wrap.rc-color-deep-purple .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #cbbae9; }
+    .realcrypto-comparison-wrap.rc-color-deep-purple .rc-comparisons-comparison-table * {
+      border-color: #9f80d7 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-indigo .rc-comparisons-comparison-table {
+    color: #0a0d1e;
+    background: #d1d6ef; }
+    .realcrypto-comparison-wrap.rc-color-indigo .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #bec5e8; }
+    .realcrypto-comparison-wrap.rc-color-indigo .rc-comparisons-comparison-table * {
+      border-color: #8591d5 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-blue .rc-comparisons-comparison-table {
+    color: #042844;
+    background: #e3f2fd; }
+    .realcrypto-comparison-wrap.rc-color-blue .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #cae6fc; }
+    .realcrypto-comparison-wrap.rc-color-blue .rc-comparisons-comparison-table * {
+      border-color: #82c4f8 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-light-blue .rc-comparisons-comparison-table {
+    color: #011d2a;
+    background: #c5ecfe; }
+    .realcrypto-comparison-wrap.rc-color-light-blue .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #ace4fe; }
+    .realcrypto-comparison-wrap.rc-color-light-blue .rc-comparisons-comparison-table * {
+      border-color: #60ccfd !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-cyan .rc-comparisons-comparison-table {
+    color: #000708;
+    background: #a1f4ff; }
+    .realcrypto-comparison-wrap.rc-color-cyan .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #88f1ff; }
+    .realcrypto-comparison-wrap.rc-color-cyan .rc-comparisons-comparison-table * {
+      border-color: #3be9ff !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-teal .rc-comparisons-comparison-table {
+    color: black;
+    background: #63fff0; }
+    .realcrypto-comparison-wrap.rc-color-teal .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #4affee; }
+    .realcrypto-comparison-wrap.rc-color-teal .rc-comparisons-comparison-table * {
+      border-color: #00fce4 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-green .rc-comparisons-comparison-table {
+    color: #0e210f;
+    background: #d9eeda; }
+    .realcrypto-comparison-wrap.rc-color-green .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #c7e7c8; }
+    .realcrypto-comparison-wrap.rc-color-green .rc-comparisons-comparison-table * {
+      border-color: #92cf94 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-light-green .rc-comparisons-comparison-table {
+    color: #223110;
+    background: #edf6e3; }
+    .realcrypto-comparison-wrap.rc-color-light-green .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #e1efd0; }
+    .realcrypto-comparison-wrap.rc-color-light-green .rc-comparisons-comparison-table * {
+      border-color: #bcdc97 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-lime .rc-comparisons-comparison-table {
+    color: #393e0b;
+    background: #f9fbe6; }
+    .realcrypto-comparison-wrap.rc-color-lime .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #f3f7d1; }
+    .realcrypto-comparison-wrap.rc-color-lime .rc-comparisons-comparison-table * {
+      border-color: #e3eb90 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-yellow .rc-comparisons-comparison-table {
+    color: #6e6300;
+    background: white; }
+    .realcrypto-comparison-wrap.rc-color-yellow .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #fffdee; }
+    .realcrypto-comparison-wrap.rc-color-yellow .rc-comparisons-comparison-table * {
+      border-color: #fff5a1 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-amber .rc-comparisons-comparison-table {
+    color: #3a2c00;
+    background: #fff4d3; }
+    .realcrypto-comparison-wrap.rc-color-amber .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #ffeeba; }
+    .realcrypto-comparison-wrap.rc-color-amber .rc-comparisons-comparison-table * {
+      border-color: #ffdb6d !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-orange .rc-comparisons-comparison-table {
+    color: #331e00;
+    background: #ffeacc; }
+    .realcrypto-comparison-wrap.rc-color-orange .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #ffe0b3; }
+    .realcrypto-comparison-wrap.rc-color-orange .rc-comparisons-comparison-table * {
+      border-color: #ffc166 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-deep-orange .rc-comparisons-comparison-table {
+    color: #551400;
+    background: #fff2ee; }
+    .realcrypto-comparison-wrap.rc-color-deep-orange .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #ffdfd5; }
+    .realcrypto-comparison-wrap.rc-color-deep-orange .rc-comparisons-comparison-table * {
+      border-color: #ffa588 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-brown .rc-comparisons-comparison-table {
+    color: black;
+    background: #d5c0b8; }
+    .realcrypto-comparison-wrap.rc-color-brown .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #cbb1a8; }
+    .realcrypto-comparison-wrap.rc-color-brown .rc-comparisons-comparison-table * {
+      border-color: #af8778 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-grey .rc-comparisons-comparison-table {
+    color: #383838;
+    background: white; }
+    .realcrypto-comparison-wrap.rc-color-grey .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #f7f7f7; }
+    .realcrypto-comparison-wrap.rc-color-grey .rc-comparisons-comparison-table * {
+      border-color: #d1d1d1 !important; }
+  
+  .realcrypto-comparison-wrap.rc-color-blue-grey .rc-comparisons-comparison-table {
+    color: #0d1012;
+    background: #d5dee2; }
+    .realcrypto-comparison-wrap.rc-color-blue-grey .rc-comparisons-comparison-table .rc-comparisons-table .features {
+      background: #c6d2d8; }
+    .realcrypto-comparison-wrap.rc-color-blue-grey .rc-comparisons-comparison-table * {
+      border-color: #99aeb8 !important; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    /*border: 1px solid #ddd;*/
+    background-color: #fff; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .dashicons {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top {
+      padding: 1rem;
+      display: flex;
+      align-items: center; }
+      .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top .rc-name-wrap {
+        margin-bottom: 0.5rem;
+        font-weight: bold; }
+      .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top [class*='rc-PRICE'] {
+        font-size: 1.5em;
+        vertical-align: middle; }
+      .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top .rc-sub-left {
+        flex-grow: 1; }
+        .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top .rc-sub-left .dashicons {
+          font-size: 1.4rem;
+          vertical-align: middle; }
+      .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top .rc-sub-right [class*='rc-image-'] {
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+        display: inline-block; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-bottom {
+      padding: 1rem;
+      border-top: 1px solid #eee; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-up-color .rc-arrow-down {
+      display: none; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-down-color .rc-arrow-up {
+      display: none; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single [class*='rc-image-'] {
+      height: 42px;
+      width: 42px;
+      background-size: cover;
+      margin-right: 7px; }
+    .realcrypto-box-wrap.rc-boxstyle-classic .realcrypto-box-single .rc-pos-top {
+      margin-bottom: 8px; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-classic.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-gradient {
+    color: #fff; }
+    .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single {
+      display: block;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      background: linear-gradient(to bottom, #8fbef7, #f78cab);
+      padding: 1.5rem; }
+      .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .dashicons {
+        font-size: 1rem;
+        vertical-align: middle;
+        margin-top: 3px; }
+      .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-pos-top .rc-price-label {
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 0; }
+      .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-pos-top [class*='rc-PRICE'] {
+        font-size: 2rem;
+        margin: 0; }
+      .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-ic-coin {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        margin-right: 9px;
+        background: #fff;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle; }
+        .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-ic-coin span {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          background-position: 0 0; }
+      .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-info {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 2rem; }
+        .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-info .rc-info-top {
+          margin: 0;
+          margin-bottom: 0.3rem;
+          font-size: 1.2rem; }
+        .realcrypto-box-wrap.rc-boxstyle-gradient .realcrypto-box-single .rc-info .rc-info-sub {
+          margin-bottom: 5px; }
+    .realcrypto-box-wrap.rc-boxstyle-gradient .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-gradient .rc-up-color .rc-arrow-down {
+      display: none; }
+    .realcrypto-box-wrap.rc-boxstyle-gradient .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-gradient .rc-down-color .rc-arrow-up {
+      display: none; }
+    .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-up-color .rc-highlight {
+      color: #6ca82e; }
+    .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-gradient.rc-highlight .rc-down-color .rc-highlight {
+      color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    background: #fff;
+    overflow: hidden;
+    width: 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .dashicons {
+      vertical-align: middle;
+      margin-top: 3px; }
+    .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-top {
+      z-index: 10;
+      flex: 1;
+      background-image: url(../../assets/images/bg-box.jpg);
+      background-position: center;
+      background-size: 100% auto;
+      color: #fff; }
+      .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-top .rc-param {
+        /*background: rgba(255,255,255,0.5);*/
+        padding: 1.5rem;
+        /*text-align: right;*/
+        opacity: 0.9; }
+        .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-top .rc-param .rc-lbl-01 {
+          font-weight: 100;
+          margin: 0;
+          font-size: 1rem;
+          font-weight: bold; }
+        .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-top .rc-param [class*="rc-PRICE"] {
+          display: inline-block;
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0 0 2rem 0; }
+        .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-top .rc-param span {
+          font-size: 2rem; }
+    .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-bottom {
+      padding: 1rem 1.5rem; }
+      .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-bottom .rc-ic-coin {
+        z-index: 100;
+        display: block;
+        margin: -2.7rem auto 1rem auto;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #fff;
+        width: 3.5rem;
+        height: 3.5rem;
+        box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+        float: right; }
+        .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-bottom .rc-ic-coin span {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-position: 0 0;
+          background-size: 100% 100%; }
+      .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-bottom span {
+        font-size: 1rem; }
+      .realcrypto-box-wrap.rc-boxstyle-magic .realcrypto-box-single .rc-pos-bottom .rc-name-wrap {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 5px; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-magic .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-magic .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-magic .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-magic .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-magic.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .dashicons {
+      font-size: 1rem;
+      margin-top: 5px;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-ic-coin {
+      z-index: 10;
+      display: inline-block; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-ic-coin span {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-position: 0 0;
+        background-size: 100% 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-info {
+      z-index: 10;
+      padding-left: 1rem;
+      flex: 1; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-info .rc-param {
+        display: flex;
+        align-items: center; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-info .rc-info-top {
+        margin-top: 0.4rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 1.1rem; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_1 .realcrypto-box-single .rc-decor {
+      z-index: 0;
+      position: absolute;
+      filter: grayscale(100%);
+      top: -30px;
+      right: -30px;
+      height: 150px;
+      width: 150px;
+      opacity: 0.15;
+      background-size: 100% 100%;
+      background-position: 0 0; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_1 .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-advanced_1 .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_1 .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-advanced_1 .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_1.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    display: flex;
+    overflow: hidden;
+    width: 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .dashicons {
+      font-size: 1rem;
+      margin-top: 2px; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-ic-coin {
+      flex: 1;
+      padding: 1.5rem;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      justify-content: center;
+      align-items: center; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-ic-coin span {
+        margin: 0 auto;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-size: 100% 100%;
+        background-position: 0 0; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-ic-coin .bg-coin {
+        z-index: -1;
+        height: 170%;
+        width: 200%;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        filter: blur(0.3rem) grayscale(60%);
+        transform: rotate(-15deg); }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-info {
+      flex: 2;
+      padding: 1.5rem 1.5rem 1.5rem 0;
+      display: flex;
+      align-items: center; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-info .rc-info-top {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-weight: bold; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_2 .realcrypto-box-single .rc-info .rc-price-wrap {
+        margin-bottom: .6rem; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_2 .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-advanced_2 .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_2 .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-advanced_2 .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_2.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: relative;
+    width: 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .dashicons {
+      font-size: 1rem;
+      margin-top: 3px;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-ic-coin {
+      position: absolute;
+      right: -3.5rem;
+      bottom: -2rem;
+      transform: rotate(10deg);
+      opacity: 0.6; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-ic-coin span {
+        display: block;
+        width: 13.5rem;
+        height: 13.5rem;
+        background-position: 0 0;
+        background-size: 100% 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-info .name-inside {
+      font-weight: bold;
+      margin-bottom: 0;
+      font-size: 1.2rem !important; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-info .name-inside span {
+        font-size: 1.2rem !important; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-info p {
+      margin: 0; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_3 .realcrypto-box-single .rc-info .name {
+      margin-top: 1.5rem; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_3 .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-advanced_3 .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_3 .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-advanced_3 .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-advanced_3.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    text-align: center; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single .dashicons {
+      font-size: 1.6rem;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single [class*='rc-PRICE'] {
+      font-size: 1.6rem;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single .rc-ic-coin {
+      margin-bottom: 1rem; }
+      .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single .rc-ic-coin span {
+        margin: 0rem auto;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-position: 0 0;
+        background-size: 100% 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single .rc-name-wrap {
+      margin: 0 0 1rem 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      font-weight: bold; }
+    .realcrypto-box-wrap.rc-boxstyle-advanced_4 .realcrypto-box-single .rc-info p {
+      margin: 0; }
+  
+  .realcrypto-box-wrap .rc-up-color.rc-arrow-down, .realcrypto-box-wrap .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap .rc-down-color.rc-arrow-up, .realcrypto-box-wrap .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem; }
+    .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single .dashicons {
+      font-size: 1.8rem;
+      vertical-align: middle;
+      margin-right: 8px; }
+    .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single .rc-ic-coin {
+      overflow: hidden;
+      display: inline-block;
+      float: left; }
+      .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single .rc-ic-coin span {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-size: 100% 100%;
+        background-position: 0 0; }
+    .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single .rc-info {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem; }
+      .realcrypto-box-wrap.rc-boxstyle-minisize .realcrypto-box-single .rc-info [class*="rc-name"] {
+        margin: 0rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: inline-block; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-minisize .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-minisize .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-minisize .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-minisize .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-minisize.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single {
+    margin-bottom: 1.5rem;
+    display: flex;
+    overflow: hidden;
+    width: 100%; }
+    .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .dashicons {
+      font-size: 1.6rem;
+      vertical-align: middle; }
+    .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-left-box {
+      background: #212121;
+      color: #fff;
+      text-align: center; }
+      .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-left-box .rc-ic-coin {
+        margin-top: 1rem;
+        text-align: center; }
+        .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-left-box .rc-ic-coin span {
+          width: 3rem;
+          height: 3rem;
+          display: block;
+          margin: 0px auto;
+          background-size: 100% 100%;
+          background-position: 0 0; }
+      .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-left-box [class*='rc-coiname'] {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1rem; }
+      .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-left-box [class*='rc-name'] {
+        margin: 0.5rem 0 0 0;
+        font-weight: bold;
+        font-size: 1.1rem; }
+    .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-right-box {
+      padding: 0;
+      display: flex;
+      flex-direction: column; }
+      .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-right-box .rc-right-elm {
+        padding: 0rem 1.5rem;
+        flex: 1;
+        display: flex;
+        align-items: center; }
+        .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+          color: #fff;
+          background: #8BC34A; }
+        .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-right-box .rc-right-elm p {
+          margin: 0; }
+        .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .realcrypto-box-single .rc-right-box .rc-right-elm [class*='rc-PRICE'] {
+          font-size: 1.6rem;
+          vertical-align: middle;
+          display: inline-block; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .rc-up-color.rc-arrow-down, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .rc-up-color .rc-arrow-down {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .rc-down-color.rc-arrow-up, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks .rc-down-color .rc-arrow-up {
+    display: none; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-up-color, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-up-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-up-color .rc-highlight {
+    color: #6ca82e; }
+  
+  .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-down-color, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-down-color.rc-highlight, .realcrypto-box-wrap.rc-boxstyle-multiple_blocks.rc-highlight .rc-down-color .rc-highlight {
+    color: #ce5c5c; }
+  
+  .rc-col-1 {
+    width: 8.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-2 {
+    width: 16.667%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-3 {
+    width: 25%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-4 {
+    width: 33.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-5 {
+    width: 41.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-6 {
+    width: 50%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-7 {
+    width: 58.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-8 {
+    width: 66.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-9 {
+    width: 75%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-10 {
+    width: 83.333%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-11 {
+    width: 91.666%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .rc-col-12 {
+    width: 100%;
+    float: left;
+    padding: 1.5rem; }
+  
+  .realcrypto-box-wrap {
+    margin-left: -1rem;
+    margin-right: -1rem; }
+    .realcrypto-box-wrap .realcrypto-box-single-wrap {
+      display: inline-flex;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      min-width: 300px; }
+      .realcrypto-box-wrap .realcrypto-box-single-wrap span {
+        white-space: nowrap; }
+    .realcrypto-box-wrap.rc-columns-1 .realcrypto-box-single-wrap {
+      width: 100%;
+      max-width: 100%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-1 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-columns-2 .realcrypto-box-single-wrap {
+      width: 50%;
+      max-width: 50%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-2 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-columns-3 .realcrypto-box-single-wrap {
+      width: 33.3333%;
+      max-width: 33.3333%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-3 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-columns-4 .realcrypto-box-single-wrap {
+      width: 25%;
+      max-width: 25%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-4 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-columns-5 .realcrypto-box-single-wrap {
+      width: 20%;
+      max-width: 20%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-5 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-columns-6 .realcrypto-box-single-wrap {
+      width: 16.6667%;
+      max-width: 16.6667%; }
+      @media (max-width: 720px) {
+        .realcrypto-box-wrap.rc-columns-6 .realcrypto-box-single-wrap {
+          width: 100%;
+          max-width: 100%; } }
+    .realcrypto-box-wrap.rc-boxshape-square .realcrypto-box-single {
+      border-radius: 0; }
+    .realcrypto-box-wrap.rc-boxshape-rounded .realcrypto-box-single {
+      border-radius: 5px; }
+    .realcrypto-box-wrap.rc-boxshape-round .realcrypto-box-single {
+      border-radius: 100px;
+      padding-left: 2rem;
+      padding-right: 2rem; }
+    .realcrypto-box-wrap.rc-box-shadow .realcrypto-box-single {
+      box-shadow: 0rem 0.2rem 1.5rem 0rem rgba(0, 0, 0, 0.13); }
+    .realcrypto-box-wrap.rc-box-border .realcrypto-box-single {
+      border: 1px solid #eee; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-red .realcrypto-box-single {
+      border-color: #ea1c0d; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-red {
+      color: #f44336; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-red:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-red:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #f44336; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-red:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #f44336, #ba160a); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-red .realcrypto-box-single .rc-left-box {
+      background: #ba160a; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-red .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #f44336; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-pink .realcrypto-box-single {
+      border-color: #c1134e; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-pink {
+      color: #e91e63; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-pink:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-pink:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #e91e63; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-pink:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #e91e63, #930e3b); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-pink .realcrypto-box-single .rc-left-box {
+      background: #930e3b; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-pink .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #e91e63; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-purple .realcrypto-box-single {
+      border-color: #771e86; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-purple {
+      color: #9c27b0; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-purple:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-purple:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #9c27b0; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-purple:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #9c27b0, #52145d); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-purple .realcrypto-box-single .rc-left-box {
+      background: #52145d; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-purple .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #9c27b0; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-deep-purple .realcrypto-box-single {
+      border-color: #512e90; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-deep-purple {
+      color: #673ab7; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-purple:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-purple:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #673ab7; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-purple:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #673ab7, #3b216a); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-deep-purple .realcrypto-box-single .rc-left-box {
+      background: #3b216a; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-deep-purple .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #673ab7; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-indigo .realcrypto-box-single {
+      border-color: #32408f; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-indigo {
+      color: #3f51b5; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-indigo:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-indigo:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #3f51b5; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-indigo:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #3f51b5, #252f69); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-indigo .realcrypto-box-single .rc-left-box {
+      background: #252f69; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-indigo .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #3f51b5; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-blue .realcrypto-box-single {
+      border-color: #0c7cd5; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-blue {
+      color: #2196f3; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-blue:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-blue:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #2196f3; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-blue:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #2196f3, #0960a5); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-blue .realcrypto-box-single .rc-left-box {
+      background: #0960a5; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-blue .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #2196f3; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-light-blue .realcrypto-box-single {
+      border-color: #0286c2; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-light-blue {
+      color: #03a9f4; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-light-blue:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-light-blue:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #03a9f4; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-light-blue:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #03a9f4, #02638f); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-light-blue .realcrypto-box-single .rc-left-box {
+      background: #02638f; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-light-blue .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #03a9f4; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-cyan .realcrypto-box-single {
+      border-color: #008fa1; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-cyan {
+      color: #00bcd4; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-cyan:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-cyan:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #00bcd4; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-cyan:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #00bcd4, #00626e); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-cyan .realcrypto-box-single .rc-left-box {
+      background: #00626e; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-cyan .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #00bcd4; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-teal .realcrypto-box-single {
+      border-color: #00635a; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-teal {
+      color: #009688; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-teal:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-teal:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #009688; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-teal:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #009688, #00302c); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-teal .realcrypto-box-single .rc-left-box {
+      background: #00302c; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-teal .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #009688; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-green .realcrypto-box-single {
+      border-color: #3d8b40; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-green {
+      color: #4caf50; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-green:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-green:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #4caf50; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-green:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #4caf50, #2d682f); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-green .realcrypto-box-single .rc-left-box {
+      background: #2d682f; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-green .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #4caf50; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-light-green .realcrypto-box-single {
+      border-color: #71a436; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-light-green {
+      color: #8bc34a; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-light-green:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-light-green:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #8bc34a; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-light-green:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #8bc34a, #577d2a); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-light-green .realcrypto-box-single .rc-left-box {
+      background: #577d2a; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-light-green .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #8bc34a; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-lime .realcrypto-box-single {
+      border-color: #b2c022; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-lime {
+      color: #cddc39; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-lime:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-lime:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #cddc39; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-lime:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #cddc39, #89951a); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-lime .realcrypto-box-single .rc-left-box {
+      background: #89951a; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-lime .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #cddc39; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-yellow .realcrypto-box-single {
+      border-color: #ffe608; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-yellow {
+      color: #ffeb3b; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-yellow:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-yellow:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #ffeb3b; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-yellow:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #ffeb3b, #d4be00); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-yellow .realcrypto-box-single .rc-left-box {
+      background: #d4be00; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-yellow .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #ffeb3b; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-amber .realcrypto-box-single {
+      border-color: #d39e00; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-amber {
+      color: #ffc107; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-amber:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-amber:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #ffc107; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-amber:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #ffc107, #a07800); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-amber .realcrypto-box-single .rc-left-box {
+      background: #a07800; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-amber .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #ffc107; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-orange .realcrypto-box-single {
+      border-color: #cc7a00; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-orange {
+      color: #ff9800; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-orange:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-orange:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #ff9800; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-orange:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #ff9800, #995b00); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-orange .realcrypto-box-single .rc-left-box {
+      background: #995b00; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-orange .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #ff9800; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-deep-orange .realcrypto-box-single {
+      border-color: #ee3900; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-deep-orange {
+      color: #ff5722; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-orange:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-orange:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #ff5722; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-deep-orange:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #ff5722, #bb2d00); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-deep-orange .realcrypto-box-single .rc-left-box {
+      background: #bb2d00; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-deep-orange .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #ff5722; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-brown .realcrypto-box-single {
+      border-color: #593f35; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-brown {
+      color: #795548; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-brown:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-brown:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #795548; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-brown:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #795548, #392822); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-brown .realcrypto-box-single .rc-left-box {
+      background: #392822; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-brown .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #795548; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-grey .realcrypto-box-single {
+      border-color: #858585; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-grey {
+      color: #9e9e9e; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-grey:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-grey:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #9e9e9e; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-grey:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #9e9e9e, #6b6b6b); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-grey .realcrypto-box-single .rc-left-box {
+      background: #6b6b6b; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-grey .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #9e9e9e; }
+    .realcrypto-box-wrap.rc-box-border.rc-color-blue-grey .realcrypto-box-single {
+      border-color: #4b626d; }
+    .realcrypto-box-wrap:not(.rc-fill-bg).rc-color-blue-grey {
+      color: #607d8b; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-color-blue-grey:not(.rc-boxstyle-multiple_blocks) {
+      color: #fff; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-blue-grey:not(.rc-boxstyle-multiple_blocks) .realcrypto-box-single {
+        background: #607d8b; }
+      .realcrypto-box-wrap.rc-fill-bg.rc-color-blue-grey:not(.rc-boxstyle-multiple_blocks).rc-boxstyle-gradient .realcrypto-box-single {
+        background: linear-gradient(to bottom, #607d8b, #36474f); }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-blue-grey .realcrypto-box-single .rc-left-box {
+      background: #36474f; }
+    .realcrypto-box-wrap.rc-fill-bg.rc-boxstyle-multiple_blocks.rc-color-blue-grey .realcrypto-box-single .rc-right-box .rc-right-elm:last-child {
+      background: #607d8b; }
+  
+  .realcrypto-convert-wrap .realcrypto-convert-inside {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fafafa;
+    border: 1px solid #e3e3e3;
+    padding: 20px 20px 0; }
+    @media (min-width: 720px) {
+      .realcrypto-convert-wrap .realcrypto-convert-inside {
+        max-width: 65%; } }
+    .realcrypto-convert-wrap .realcrypto-convert-inside > div > span {
+      display: block;
+      margin-bottom: 20px !important; }
+    .realcrypto-convert-wrap .realcrypto-convert-inside .rc-btn-exchange {
+      width: 50px;
+      cursor: pointer;
+      background-color: #ababab;
+      color: #fff; }
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-btn-exchange:hover {
+        opacity: .9; }
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-btn-exchange.active {
+        opacity: .5; }
+        .realcrypto-convert-wrap .realcrypto-convert-inside .rc-btn-exchange.active span {
+          animation: spin 4s infinite linear;
+          -webkit-animation: spin 4s infinite linear; }
+    .realcrypto-convert-wrap .realcrypto-convert-inside .rc-result {
+      background-color: #eee; }
+    .realcrypto-convert-wrap .realcrypto-convert-inside .select2-container {
+      width: 100% !important; }
+    .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-left,
+    .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-right {
+      width: 40%; }
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-left select, .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-left input,
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-right select,
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-right input {
+        width: 100%; }
+    .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-center {
+      flex-grow: 1;
+      text-align: center; }
+      .realcrypto-convert-wrap .realcrypto-convert-inside .rc-pos-center span {
+        height: 34px;
+        line-height: 34px;
+        display: inline-block;
+        margin-bottom: 20px !important; }
+  
+  .realcrypto-convert-wrap .rc-input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+  
+  .realcrypto-convert-wrap.rc-shape-round .select2-container--default .select2-selection--single,
+  .realcrypto-convert-wrap.rc-shape-round .rc-input,
+  .realcrypto-convert-wrap.rc-shape-round .rc-btn-exchange {
+    border-radius: 100px; }
+  
+  .realcrypto-convert-wrap.rc-shape-round .realcrypto-convert-inside {
+    border-radius: 10px; }
+  
+  .realcrypto-convert-wrap.rc-shape-rounded .select2-container--default .select2-selection--single,
+  .realcrypto-convert-wrap.rc-shape-rounded .rc-input,
+  .realcrypto-convert-wrap.rc-shape-rounded .rc-btn-exchange,
+  .realcrypto-convert-wrap.rc-shape-rounded .realcrypto-convert-inside {
+    border-radius: 4px; }
+  
+  .realcrypto-convert-wrap.rc-color-transparent .realcrypto-convert-inside {
+    background: none; }
+  
+  .realcrypto-convert-wrap.rc-color-red .realcrypto-convert-inside {
+    background: #fff8f7;
+    border-color: #f99d97; }
+    .realcrypto-convert-wrap.rc-color-red .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #f44336; }
+    .realcrypto-convert-wrap.rc-color-red .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #f44336; }
+  
+  .realcrypto-convert-wrap.rc-color-pink .realcrypto-convert-inside {
+    background: #fbd8e4;
+    border-color: #f27ba3; }
+    .realcrypto-convert-wrap.rc-color-pink .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #e91e63; }
+    .realcrypto-convert-wrap.rc-color-pink .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #e91e63; }
+  
+  .realcrypto-convert-wrap.rc-color-purple .realcrypto-convert-inside {
+    background: #e6b5ee;
+    border-color: #ca61dc; }
+    .realcrypto-convert-wrap.rc-color-purple .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #9c27b0; }
+    .realcrypto-convert-wrap.rc-color-purple .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #9c27b0; }
+  
+  .realcrypto-convert-wrap.rc-color-deep-purple .realcrypto-convert-inside {
+    background: #daceef;
+    border-color: #9f80d7; }
+    .realcrypto-convert-wrap.rc-color-deep-purple .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #673ab7; }
+    .realcrypto-convert-wrap.rc-color-deep-purple .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #673ab7; }
+  
+  .realcrypto-convert-wrap.rc-color-indigo .realcrypto-convert-inside {
+    background: #d1d6ef;
+    border-color: #8591d5; }
+    .realcrypto-convert-wrap.rc-color-indigo .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #3f51b5; }
+    .realcrypto-convert-wrap.rc-color-indigo .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #3f51b5; }
+  
+  .realcrypto-convert-wrap.rc-color-blue .realcrypto-convert-inside {
+    background: #e3f2fd;
+    border-color: #82c4f8; }
+    .realcrypto-convert-wrap.rc-color-blue .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #2196f3; }
+    .realcrypto-convert-wrap.rc-color-blue .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #2196f3; }
+  
+  .realcrypto-convert-wrap.rc-color-light-blue .realcrypto-convert-inside {
+    background: #c5ecfe;
+    border-color: #60ccfd; }
+    .realcrypto-convert-wrap.rc-color-light-blue .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #03a9f4; }
+    .realcrypto-convert-wrap.rc-color-light-blue .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #03a9f4; }
+  
+  .realcrypto-convert-wrap.rc-color-cyan .realcrypto-convert-inside {
+    background: #a1f4ff;
+    border-color: #3be9ff; }
+    .realcrypto-convert-wrap.rc-color-cyan .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #00bcd4; }
+    .realcrypto-convert-wrap.rc-color-cyan .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #00bcd4; }
+  
+  .realcrypto-convert-wrap.rc-color-teal .realcrypto-convert-inside {
+    background: #63fff0;
+    border-color: #00fce4; }
+    .realcrypto-convert-wrap.rc-color-teal .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #009688; }
+    .realcrypto-convert-wrap.rc-color-teal .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #009688; }
+  
+  .realcrypto-convert-wrap.rc-color-green .realcrypto-convert-inside {
+    background: #d9eeda;
+    border-color: #92cf94; }
+    .realcrypto-convert-wrap.rc-color-green .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #4caf50; }
+    .realcrypto-convert-wrap.rc-color-green .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #4caf50; }
+  
+  .realcrypto-convert-wrap.rc-color-light-green .realcrypto-convert-inside {
+    background: #edf6e3;
+    border-color: #bcdc97; }
+    .realcrypto-convert-wrap.rc-color-light-green .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #8bc34a; }
+    .realcrypto-convert-wrap.rc-color-light-green .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #8bc34a; }
+  
+  .realcrypto-convert-wrap.rc-color-lime .realcrypto-convert-inside {
+    background: #f9fbe6;
+    border-color: #e3eb90; }
+    .realcrypto-convert-wrap.rc-color-lime .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #cddc39; }
+    .realcrypto-convert-wrap.rc-color-lime .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #cddc39; }
+  
+  .realcrypto-convert-wrap.rc-color-yellow .realcrypto-convert-inside {
+    background: white;
+    border-color: #fff5a1; }
+    .realcrypto-convert-wrap.rc-color-yellow .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #ffeb3b; }
+    .realcrypto-convert-wrap.rc-color-yellow .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #ffeb3b; }
+  
+  .realcrypto-convert-wrap.rc-color-amber .realcrypto-convert-inside {
+    background: #fff4d3;
+    border-color: #ffdb6d; }
+    .realcrypto-convert-wrap.rc-color-amber .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #ffc107; }
+    .realcrypto-convert-wrap.rc-color-amber .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #ffc107; }
+  
+  .realcrypto-convert-wrap.rc-color-orange .realcrypto-convert-inside {
+    background: #ffeacc;
+    border-color: #ffc166; }
+    .realcrypto-convert-wrap.rc-color-orange .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #ff9800; }
+    .realcrypto-convert-wrap.rc-color-orange .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #ff9800; }
+  
+  .realcrypto-convert-wrap.rc-color-deep-orange .realcrypto-convert-inside {
+    background: #fff2ee;
+    border-color: #ffa588; }
+    .realcrypto-convert-wrap.rc-color-deep-orange .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #ff5722; }
+    .realcrypto-convert-wrap.rc-color-deep-orange .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #ff5722; }
+  
+  .realcrypto-convert-wrap.rc-color-brown .realcrypto-convert-inside {
+    background: #d5c0b8;
+    border-color: #af8778; }
+    .realcrypto-convert-wrap.rc-color-brown .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #795548; }
+    .realcrypto-convert-wrap.rc-color-brown .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #795548; }
+  
+  .realcrypto-convert-wrap.rc-color-grey .realcrypto-convert-inside {
+    background: white;
+    border-color: #d1d1d1; }
+    .realcrypto-convert-wrap.rc-color-grey .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #9e9e9e; }
+    .realcrypto-convert-wrap.rc-color-grey .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #9e9e9e; }
+  
+  .realcrypto-convert-wrap.rc-color-blue-grey .realcrypto-convert-inside {
+    background: #d5dee2;
+    border-color: #99aeb8; }
+    .realcrypto-convert-wrap.rc-color-blue-grey .realcrypto-convert-inside .rc-btn-exchange {
+      background-color: #607d8b; }
+    .realcrypto-convert-wrap.rc-color-blue-grey .realcrypto-convert-inside .dashicons-arrow-right-alt {
+      color: #607d8b; }
